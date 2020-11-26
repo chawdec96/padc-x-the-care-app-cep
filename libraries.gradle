@@ -1,0 +1,38 @@
+ext {
+    glideVersion = "4.11.0"
+    lifeCycleVersion= "2.2.0"
+    roomVersion = "2.2.3"
+    gsonVersion = "2.8.6"
+    retrofitVersion = "2.6.1"
+    retrofitConverterVersion = "2.5.0"
+    retrofitAdapterVersion = "2.6.1"
+    rxKotlinVersion = "2.4.0"
+    rxAndroidVersion = "2.1.1"
+    okHttpVersion = "4.1.0"
+
+    firebaseVersion = "26.1.0"
+
+    libraries = [
+            glide: "com.github.bumptech.glide:glide:$glideVersion",
+            glideAnnotation: "com.github.bumptech.glide:compiler:$glideVersion",
+            liveData: "androidx.lifecycle:lifecycle-livedata-ktx:$lifeCycleVersion",
+            lifeCycle: "android.arch.lifecycle:extensions:$lifeCycleVersion",
+            lifeCycleAnnotation: "android.arch.lifecycle:compiler:$lifeCycleVersion",
+            annotationProcessor: "androidx.lifecycle:lifecycle-compiler:$lifeCycleVersion",
+            room: "androidx.room:room-runtime:$roomVersion",
+            roomAnnotation: "androidx.room:room-compiler:$roomVersion",
+            gson: "com.google.code.gson:gson:$gsonVersion",
+            retrofit: "com.squareup.retrofit2:retrofit:$retrofitVersion",
+            retorfitConverter: "com.squareup.retrofit2:converter-gson:$retrofitConverterVersion",
+            retrofitAdapter:"com.squareup.retrofit2:adapter-rxjava2:$retrofitAdapterVersion",
+            rxKotlin: "io.reactivex.rxjava2:rxkotlin:$rxKotlinVersion",
+            rxAndroid: "io.reactivex.rxjava2:rxandroid:$rxAndroidVersion",
+            okHttp: "com.squareup.okhttp3:okhttp:$okHttpVersion"
+
+    ]
+
+    firebaseLibraries = [
+            platforms: "com.google.firebase:firebase-bom:$firebaseVersion",
+            analytics: "com.google.firebase:firebase-analytics-ktx"
+    ]
+}

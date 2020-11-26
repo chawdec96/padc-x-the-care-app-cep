@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/The_Care_App.iml" filepath="$PROJECT_DIR$/.idea/modules/The_Care_App.iml" group="The_Care_App" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/app.iml" group="The Care App/app" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/doctors/doctors.iml" filepath="$PROJECT_DIR$/.idea/modules/doctors/doctors.iml" group="The Care App/doctors" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/shared/shared.iml" filepath="$PROJECT_DIR$/.idea/modules/shared/shared.iml" group="The Care App/shared" />
+    </modules>
+  </component>
+</project>

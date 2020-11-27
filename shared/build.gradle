@@ -43,5 +43,6 @@ dependencies {
     implementation platform(rootProject.ext.firebaseLibraries.platforms)
     implementation rootProject.ext.firebaseLibraries.analytics
     implementation rootProject.ext.firebaseLibraries.authentication
+    implementation rootProject.ext.firebaseLibraries.firestore
 
 }

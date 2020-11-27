@@ -33,6 +33,7 @@ ext {
 
     firebaseLibraries = [
             platforms: "com.google.firebase:firebase-bom:$firebaseVersion",
-            analytics: "com.google.firebase:firebase-analytics-ktx"
+            analytics: "com.google.firebase:firebase-analytics-ktx",
+            authentication: "com.google.firebase:firebase-auth-ktx"
     ]
 }

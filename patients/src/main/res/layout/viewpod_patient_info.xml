@@ -1,6 +1,262 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/margin_medium_2">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:id="@+id/llPatientName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="3">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.4"
+            android:textSize="@dimen/text_regular"
+            android:textColor="@color/primary_text"
+            android:text="@string/txt_lbl_patient_name"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.4"
+            android:textColor="@color/primary_text"
+            android:textSize="@dimen/text_regular"
+            android:text=":"
+            android:textStyle="bold"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/tvPatientName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="@dimen/text_regular"
+            android:textColor="@color/primary_text"
+            android:text="Aung Aung"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llPatientDob"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="3">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.4"
+            android:textSize="@dimen/text_regular"
+            android:textColor="@color/primary_text"
+            android:text="@string/txt_lbl_dob"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.4"
+            android:textColor="@color/primary_text"
+            android:textSize="@dimen/text_regular"
+            android:text=":"
+            android:textStyle="bold"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/tvPatientDob"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="@dimen/text_regular"
+            android:textColor="@color/primary_text"
+            android:text="12 Nov 2000"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llPatientHeight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="3">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.4"
+            android:textSize="@dimen/text_regular"
+            android:textColor="@color/primary_text"
+            android:text="@string/txt_lbl_height"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.4"
+            android:textColor="@color/primary_text"
+            android:textSize="@dimen/text_regular"
+            android:text=":"
+            android:textStyle="bold"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/tvPatientHeight"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="@dimen/text_regular"
+            android:textColor="@color/primary_text"
+            android:text="5.8ft"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llPatientBloodType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="3">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.4"
+            android:textSize="@dimen/text_regular"
+            android:textColor="@color/primary_text"
+            android:text="@string/txt_lbl_blood_type"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.4"
+            android:textColor="@color/primary_text"
+            android:textSize="@dimen/text_regular"
+            android:text=":"
+            android:textStyle="bold"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/tvPatientBloodType"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="@dimen/text_regular"
+            android:textColor="@color/primary_text"
+            android:text="A"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llPatientWeight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="3"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.4"
+            android:textSize="@dimen/text_regular"
+            android:textColor="@color/primary_text"
+            android:text="@string/txt_lbl_weight"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.4"
+            android:textColor="@color/primary_text"
+            android:textSize="@dimen/text_regular"
+            android:text=":"
+            android:textStyle="bold"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/tvPatientWeight"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="@dimen/text_regular"
+            android:textColor="@color/primary_text"
+            android:text="165lb"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llBloodPressure"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="3"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.4"
+            android:textSize="@dimen/text_regular"
+            android:textColor="@color/primary_text"
+            android:text="@string/txt_lbl_blood_pressure"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.4"
+            android:textColor="@color/primary_text"
+            android:textSize="@dimen/text_regular"
+            android:text=":"
+            android:textStyle="bold"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/tvPatientBloodPressure"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="@dimen/text_regular"
+            android:textColor="@color/primary_text"
+            android:text="90/50 mmHg"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llAllergicMedicine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="3">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.4"
+            android:textSize="@dimen/text_regular"
+            android:textColor="@color/primary_text"
+            android:text="@string/txt_lbl_allergic_medicine"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.4"
+            android:textColor="@color/primary_text"
+            android:textSize="@dimen/text_regular"
+            android:text=":"
+            android:textStyle="bold"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/tvPatientAllergicMedicine"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="@dimen/text_regular"
+            android:textColor="@color/primary_text"
+            android:text="-"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>

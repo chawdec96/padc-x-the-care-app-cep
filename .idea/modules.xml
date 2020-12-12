@@ -3,8 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/The_Care_App.iml" filepath="$PROJECT_DIR$/.idea/modules/The_Care_App.iml" group="The_Care_App" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/app.iml" group="The Care App/app" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/doctors/doctors.iml" filepath="$PROJECT_DIR$/.idea/modules/doctors/doctors.iml" group="The Care App/doctors" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/patients.iml" filepath="$PROJECT_DIR$/.idea/modules/app/patients.iml" group="The Care App/patients" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/shared/shared.iml" filepath="$PROJECT_DIR$/.idea/modules/shared/shared.iml" group="The Care App/shared" />
     </modules>
   </component>

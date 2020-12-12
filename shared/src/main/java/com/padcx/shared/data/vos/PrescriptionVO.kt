@@ -9,5 +9,5 @@ data class PrescriptionVO (
     var count: Int = 0,
     var name: String ?= "",
     var price: Int = 0,
-    var routine: RoutineVO
+    var routine: RoutineVO = RoutineVO()
 )

@@ -1,4 +1,4 @@
-package com.padcx.shared
+package com.padcx.shared.data.models
 
 import android.content.Context
 import com.padcx.shared.persistence.db.TheCareDB

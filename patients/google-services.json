@@ -8,6 +8,35 @@
   "client": [
     {
       "client_info": {
+        "mobilesdk_app_id": "1:351439368093:android:6d84b44c870803966cc974",
+        "android_client_info": {
+          "package_name": "com.padcx.doctors"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "351439368093-dgpkahlhoeu05q4gtk47ttstls9pimha.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDi-KFDJphUn0P_LhVVkDorpEjaFgGZGvo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "351439368093-dgpkahlhoeu05q4gtk47ttstls9pimha.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:351439368093:android:cfa4b9c659db4a616cc974",
         "android_client_info": {
           "package_name": "com.padcx.thecareapp"

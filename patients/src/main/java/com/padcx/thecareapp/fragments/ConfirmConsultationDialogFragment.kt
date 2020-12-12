@@ -1,32 +1,25 @@
 package com.padcx.thecareapp.fragments
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.DialogFragment
+import com.padcx.shared.data.vos.SpecialityVO
 import com.padcx.thecareapp.R
+import com.padcx.thecareapp.activities.PatientInfoActivity
+import kotlinx.android.synthetic.main.fragment_comfirm_consultation_dialog.*
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
+class ConfirmConsultationDialogFragment: DialogFragment() {
 
-/**
- * A simple [Fragment] subclass.
- * Use the [ComfirmConsultationDialogFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
-class ComfirmConsultationDialogFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+    private var speciality: SpecialityVO? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
+            speciality = it.getSerializable(ARG_PARAM_SPECIALITY) as SpecialityVO
         }
     }
 
@@ -38,22 +31,33 @@ class ComfirmConsultationDialogFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_comfirm_consultation_dialog, container, false)
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        setUpListener()
+
+        tvQuestionForRequest.text = "${speciality?.name} ${resources.getString(R.string.txt_lbl_question_consultation)}"
+        Log.d("text", "==> ${tvQuestionForRequest.text}")
+    }
+
+    private fun setUpListener() {
+        btnSure.setOnClickListener {
+            startActivity(PatientInfoActivity.newIntent(this.requireContext(), speciality))
+            dismiss()
+        }
+
+        btnNotSure.setOnClickListener { dismiss() }
+    }
+
     companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment ComfirmConsultationDialogFragment.
-         */
-        // TODO: Rename and change types and number of parameters
+
+        const val ARG_PARAM_SPECIALITY = "ARG_PARAM_SPECIALITY"
+
         @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            ComfirmConsultationDialogFragment().apply {
+        fun newInstance(specialityVO: SpecialityVO) =
+            ConfirmConsultationDialogFragment().apply {
                 arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
+                    putSerializable(ARG_PARAM_SPECIALITY, specialityVO)
                 }
             }
     }

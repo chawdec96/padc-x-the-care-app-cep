@@ -1,9 +1,285 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activities.CheckOutActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="@dimen/margin_medium"
+                android:layout_margin="@dimen/margin_medium_2">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tvMedicineTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/txt_lbl_medicine"
+                        android:textSize="@dimen/text_regular"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/white"
+                        android:background="@color/accent"
+                        android:padding="@dimen/margin_medium_2"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvMedicines"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tvMedicineTitle"
+                        android:padding="@dimen/margin_medium"
+                        tools:listitem="@layout/item_checkout_medicine"
+                        tools:itemCount="3"/>
+
+                    <View
+                        android:id="@+id/view"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/rvMedicines"
+                        android:background="@color/divider"
+                        android:layout_margin="@dimen/margin_medium"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="2"
+                        android:layout_below="@id/view"
+                        android:layout_marginBottom="@dimen/margin_medium_2"
+                        android:paddingStart="@dimen/margin_medium_2"
+                        android:paddingEnd="@dimen/margin_medium_2">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Total (MMK)"
+                            android:textSize="@dimen/text_regular"
+                            android:textColor="@color/primary_text"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/tvTotalPrice"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="10,000"
+                            android:textSize="@dimen/text_regular"
+                            android:textColor="@color/primary_text"
+                            android:textStyle="bold"
+                            android:gravity="end"/>
+
+
+                    </LinearLayout>
+                </RelativeLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_medium_2"
+                app:cardCornerRadius="@dimen/margin_medium"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvTitleAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/txt_lbl_address"
+                        android:textSize="@dimen/text_regular"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/white"
+                        android:background="@color/accent"
+                        android:padding="@dimen/margin_medium_2"/>
+
+                    <LinearLayout
+                        android:id="@+id/llNewAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:weightSum="2"
+                            android:layout_marginStart="@dimen/margin_medium_2"
+                            android:layout_marginEnd="@dimen/margin_medium_2"
+                            android:layout_marginTop="@dimen/margin_medium_2">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/txt_lbl_division"
+                                android:textColor="@color/primary_text"
+                                android:textSize="@dimen/text_small"
+                                />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/txt_lbl_city"
+                                android:textColor="@color/primary_text"
+                                android:textSize="@dimen/text_small"
+                                />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:weightSum="2">
+
+                            <androidx.appcompat.widget.AppCompatSpinner
+                                android:id="@+id/spinnerDivision"
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/margin_xxlarge"
+                                android:layout_weight="1"
+                                android:background="@drawable/bg_spinner"
+                                android:layout_marginEnd="@dimen/margin_medium"
+                                android:layout_marginStart="@dimen/margin_medium_2"
+                                android:layout_marginTop="@dimen/margin_medium"
+                                />
+
+                            <androidx.appcompat.widget.AppCompatSpinner
+                                android:id="@+id/spinnerCity"
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/margin_xxlarge"
+                                android:layout_weight="1"
+                                android:background="@drawable/bg_spinner"
+                                android:layout_marginEnd="@dimen/margin_medium_2"
+                                android:layout_marginStart="@dimen/margin_medium"
+                                android:layout_marginTop="@dimen/margin_medium"
+                                />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/txt_lbl_full_address"
+                            android:textSize="@dimen/text_small"
+                            android:textColor="@color/primary_text"
+                            android:layout_marginStart="@dimen/margin_medium_2"
+                            android:layout_marginTop="@dimen/margin_medium_2"/>
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:background="@drawable/rounded_corner_bg"
+                            android:layout_marginTop="@dimen/margin_medium"
+                            android:layout_marginStart="@dimen/margin_medium_2"
+                            android:layout_marginEnd="@dimen/margin_medium_2"
+                            android:layout_marginBottom="@dimen/margin_medium_2">
+
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@android:color/white"
+                                android:hint="Enter Full Address"
+                                android:textSize="@dimen/text_small"
+                                android:layout_margin="@dimen/margin_medium"
+
+                                />
+                        </FrameLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llAddresses"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/txt_lbl_choose_address"
+                            android:layout_marginTop="@dimen/margin_medium_2"
+                            android:layout_marginStart="@dimen/margin_medium_2"
+                            android:textSize="@dimen/text_small"
+                            android:textColor="@color/primary_text"/>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rvAddresses"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/margin_medium"
+                            tools:itemCount="2"
+                            tools:listitem="@layout/item_address"/>
+
+                        <LinearLayout
+                            android:id="@+id/btnAddNewAddress"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/rounded_corner_bg"
+                            android:gravity="center"
+                            android:layout_marginStart="@dimen/margin_medium_2"
+                            android:layout_marginEnd="@dimen/margin_medium_2"
+                            android:layout_marginBottom="@dimen/margin_medium_2"
+                            android:paddingTop="@dimen/margin_medium"
+                            android:paddingBottom="@dimen/margin_medium">
+
+                            <ImageView
+                                android:layout_width="@dimen/margin_large"
+                                android:layout_height="@dimen/margin_large"
+                                android:src="@drawable/ic_baseline_add_circle_outline_24"
+                                app:tint="@color/secondary_text" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/btn_lbl_add_new_address"
+                                android:textColor="@color/primary_text"
+                                android:textSize="@dimen/text_small"
+                                android:layout_marginStart="@dimen/margin_medium"/>
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnTakeOrder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_lbl_take_order"
+                android:backgroundTint="@color/accent"
+                app:cornerRadius="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:layout_marginBottom="@dimen/margin_medium_2"
+                android:layout_marginStart="@dimen/margin_xxlarge"
+                android:layout_marginEnd="@dimen/margin_xxlarge"/>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</FrameLayout>

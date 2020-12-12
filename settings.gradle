@@ -1,4 +1,4 @@
 include ':doctors'
 include ':shared'
-include ':app'
+include ':patients'
 rootProject.name = "The Care App"

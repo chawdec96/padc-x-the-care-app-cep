@@ -1,6 +1,6 @@
 package com.padcx.thecareapp.mvp.views
 
-import com.padcx.shared.BaseView
+import com.padcx.shared.mvp.views.BaseView
 
 interface LoginView: BaseView {
 

@@ -1,28 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".fragments.HomeFragment">
 
     <TextView
-        android:id="@+id/textview_first"
+        android:id="@+id/tvRecentDoctors"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_first_fragment"
-        app:layout_constraintBottom_toTopOf="@id/button_first"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="@string/txt_lbl_recent_doctors"
+        android:textSize="@dimen/text_regular_2x"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/margin_medium_2"
+        android:layout_marginStart="@dimen/margin_medium_2"
+        android:textColor="@color/primary_text"
+        />
 
-    <Button
-        android:id="@+id/button_first"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvRecentDoctors"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/margin_medium"
+        android:paddingEnd="@dimen/margin_medium"
+        tools:listitem="@layout/item_recent_doctor"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:orientation="horizontal"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvChats"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/margin_medium"
+        android:paddingStart="@dimen/margin_medium"
+        android:paddingEnd="@dimen/margin_medium"
+        android:visibility="gone"/>
+
+
+    <TextView
+        android:id="@+id/tvSpecialities"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/next"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textview_first" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:text="@string/txt_lbl_specialities"
+        android:textSize="@dimen/text_regular_2x"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_marginStart="@dimen/margin_medium_2"
+        android:textColor="@color/primary_text"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvSpecialities"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/margin_medium"
+        android:paddingEnd="@dimen/margin_medium"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:spanCount="2"
+        android:visibility="visible"
+        tools:listitem="@layout/item_speciality"/>
+
+</LinearLayout>

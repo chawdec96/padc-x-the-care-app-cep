@@ -7,7 +7,7 @@ import android.graphics.RectF
 import android.util.AttributeSet
 import androidx.appcompat.widget.AppCompatImageView
 import androidx.core.content.withStyledAttributes
-import com.padcx.shared.R
+import com.padcx.thecareapp.R
 
 class RoundedCornerImageView @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0

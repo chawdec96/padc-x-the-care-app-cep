@@ -1,9 +1,322 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".activities.PatientInfoActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/llSteps"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/ivStep1"
+                        android:layout_width="@dimen/margin_large"
+                        android:layout_height="@dimen/margin_large"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/checked" />
+
+                    <View
+                        android:layout_width="wrap_content"
+                        android:layout_height="2dp"
+                        android:layout_alignTop="@id/ivStep1"
+                        android:layout_toEndOf="@id/ivStep1"
+                        android:background="@color/accent"
+                        android:layout_marginTop="@dimen/margin_card_medium_2"/>
+
+                    <TextView
+                        android:id="@+id/tvGeneralQuestions"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/ivStep1"
+                        android:layout_centerHorizontal="true"
+                        android:text="@string/txt_lbl_general_questions"
+                        android:textSize="@dimen/text_small"
+                        android:textColor="@color/primary_text"
+                        android:layout_marginTop="@dimen/margin_small"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/ivStep2"
+                        android:layout_width="@dimen/margin_large"
+                        android:layout_height="@dimen/margin_large"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/unchecked" />
+
+                    <View
+                        android:id="@+id/view2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="2dp"
+                        android:layout_alignTop="@id/ivStep2"
+                        android:layout_toStartOf="@id/ivStep2"
+                        android:background="@color/divider"
+                        android:layout_marginTop="@dimen/margin_card_medium_2"/>
+
+                    <TextView
+                        android:id="@+id/tvSpecificQuestions"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/ivStep2"
+                        android:textColor="@color/primary_text"
+                        android:layout_centerHorizontal="true"
+                        android:text="@string/txt_lbl_specific_questions"
+                        android:textSize="@dimen/text_small"
+                        android:layout_marginTop="@dimen/margin_small"/>
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llStep1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible"
+                android:padding="@dimen/margin_medium_2">
+
+                <TextView
+                    android:id="@+id/tvDob"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txt_lbl_dob"
+                    android:textColor="@color/primary_text"
+                    android:visibility="visible"
+                    android:textSize="@dimen/text_regular"/>
+
+                <LinearLayout
+                    android:id="@+id/llDob"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="3"
+                    android:visibility="visible"
+                    android:layout_marginTop="@dimen/margin_medium">
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/spinnerDays"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/margin_xxlarge"
+                        android:layout_weight="1"
+                        style="@style/SpinnerTheme"
+                        android:layout_marginEnd="@dimen/margin_medium"/>
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/spinnerMonths"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/margin_xxlarge"
+                        android:layout_weight="1"
+                        style="@style/SpinnerTheme"
+                        android:layout_marginEnd="@dimen/margin_medium"
+                        android:layout_marginStart="@dimen/margin_medium"/>
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/spinnerYears"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/margin_xxlarge"
+                        android:layout_weight="1"
+                        style="@style/SpinnerTheme"
+                        android:layout_marginStart="@dimen/margin_medium"/>
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvHeight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txt_lbl_height"
+                    android:textSize="@dimen/text_regular"
+                    android:textColor="@color/primary_text"
+                    android:visibility="visible"
+                    android:layout_marginTop="@dimen/margin_medium_2"/>
+
+                <EditText
+                    android:id="@+id/etHeight"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_xxlarge"
+                    android:background="@drawable/rounded_corner_bg"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:hint="eg. 5.8 ft"
+                    android:visibility="visible"
+                    android:textSize="@dimen/text_regular"
+                    android:paddingStart="@dimen/margin_medium_2"/>
+
+                <TextView
+                    android:id="@+id/tvBloodType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txt_lbl_blood_type"
+                    android:textSize="@dimen/text_regular"
+                    android:textColor="@color/primary_text"
+                    android:visibility="visible"
+                    android:layout_marginTop="@dimen/margin_medium_2"/>
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/spinnerBloodType"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_xxlarge"
+                    style="@style/SpinnerTheme"
+                    android:visibility="visible"
+                    android:layout_marginTop="@dimen/margin_medium"/>
+
+                <FrameLayout
+                    android:id="@+id/llStep1Summary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:paddingTop="@dimen/margin_medium"
+                    android:paddingBottom="@dimen/margin_medium"
+                    android:background="@drawable/rounded_corner_bg">
+
+                    <include layout="@layout/viewpod_patient_info" />
+
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/tvWeight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txt_lbl_weight"
+                    android:textSize="@dimen/text_regular"
+                    android:textColor="@color/primary_text"
+                    android:layout_marginTop="@dimen/margin_medium_2"/>
+
+                <EditText
+                    android:id="@+id/etWeight"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_xxlarge"
+                    android:background="@drawable/rounded_corner_bg"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:hint="eg. 120 lb"
+                    android:textSize="@dimen/text_regular"
+                    android:paddingStart="@dimen/margin_medium_2"/>
+
+                <TextView
+                    android:id="@+id/tvBloodPressure"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txt_lbl_blood_pressure"
+                    android:textSize="@dimen/text_regular"
+                    android:textColor="@color/primary_text"
+                    android:layout_marginTop="@dimen/margin_medium_2"/>
+
+                <EditText
+                    android:id="@+id/etBloodPressure"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_xxlarge"
+                    android:background="@drawable/rounded_corner_bg"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:hint="eg. 90/50 mmHg"
+                    android:textSize="@dimen/text_regular"
+                    android:paddingStart="@dimen/margin_medium_2"/>
+
+                <TextView
+                    android:id="@+id/tvAllergicMedicine"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txt_lbl_allergic_medicine"
+                    android:textSize="@dimen/text_regular"
+                    android:textColor="@color/primary_text"
+                    android:visibility="visible"
+                    android:layout_marginTop="@dimen/margin_medium_2"/>
+
+                <FrameLayout
+                    android:id="@+id/flAllergicMedicine"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:visibility="visible"
+                    android:background="@drawable/rounded_corner_bg"
+                    android:layout_marginTop="@dimen/margin_medium">
+
+                    <EditText
+                        android:id="@+id/etAllergicMedicine"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_medium"
+                        android:hint="မတည့်သောဆေးရှိလျှင် ရေးသားပေးပါ"
+                        android:background="@android:color/white"
+                        android:textSize="@dimen/text_regular"
+                        android:layout_margin="@dimen/margin_medium_2"/>
+
+                </FrameLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnContinue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/accent"
+                    android:text="@string/btn_lbl_continue"
+                    app:cornerRadius="@dimen/margin_medium"
+                    android:drawableEnd="@drawable/ic_baseline_arrow_forward_24"
+                    android:layout_marginTop="@dimen/margin_medium_2"
+                    android:layout_marginEnd="@dimen/margin_xlarge"
+                    android:layout_gravity="end"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llStep2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvSpecificQuestions"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_medium_2"
+                    android:padding="@dimen/margin_medium"
+                    tools:itemCount="10"
+                    tools:listitem="@layout/item_specific_question"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnConsult"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="@dimen/margin_medium_2"
+                    android:backgroundTint="@color/accent"
+                    android:text="@string/btn_lbl_consult"
+                    app:cornerRadius="@dimen/margin_medium"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

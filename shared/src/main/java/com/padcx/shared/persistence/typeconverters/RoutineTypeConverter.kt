@@ -3,18 +3,18 @@ package com.padcx.shared.persistence.typeconverters
 import androidx.room.TypeConverter
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
-import com.padcx.shared.data.vos.DoctorVO
+import com.padcx.shared.data.vos.RoutineVO
 
 class RoutineTypeConverter {
 
     @TypeConverter
-    fun toString(doctor: DoctorVO): String {
-        return Gson().toJson(doctor)
+    fun toString(routine: RoutineVO): String {
+        return Gson().toJson(routine)
     }
 
     @TypeConverter
-    fun toDoctor(doctorJsonString: String): DoctorVO {
-        val doctorType = object : TypeToken<DoctorVO>() {}.type
-        return Gson().fromJson(doctorJsonString, doctorType)
+    fun toRoutine(routineJsonString: String): RoutineVO {
+        val routineType = object : TypeToken<RoutineVO>() {}.type
+        return Gson().fromJson(routineJsonString, routineType)
     }
 }

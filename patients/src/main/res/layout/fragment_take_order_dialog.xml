@@ -2,13 +2,228 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@android:color/transparent"
     tools:context=".fragments.TakeOrderDialogFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="match_parent">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_medium_2"
+                app:cardCornerRadius="@dimen/margin_medium">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rounded_corner_black_bg"
+                        android:text="@string/txt_lbl_medicine"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/text_regular"
+                        android:textStyle="bold"
+                        android:layout_marginTop="@dimen/margin_medium_2"
+                        android:layout_marginStart="@dimen/margin_medium_2"
+                        android:paddingStart="@dimen/margin_medium_2"
+                        android:paddingEnd="@dimen/margin_medium_2"
+                        android:paddingTop="@dimen/margin_small"
+                        android:paddingBottom="@dimen/margin_small"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvMedicines"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/margin_medium"
+                        tools:listitem="@layout/item_checkout_medicine"
+                        tools:itemCount="3"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/divider"
+                        android:layout_marginStart="@dimen/margin_medium"
+                        android:layout_marginEnd="@dimen/margin_medium"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_medium_2">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/txt_lbl_subtotal"
+                            android:layout_marginStart="@dimen/margin_medium_2"
+                            android:textColor="@color/primary_text"
+                            />
+
+                        <TextView
+                            android:id="@+id/tvSubtotal"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="45,000"
+                            android:textColor="@color/primary_text"
+                            android:gravity="end"
+                            android:layout_marginEnd="@dimen/margin_medium_2"/>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/txt_lbl_delivery_fee"
+                            android:layout_marginStart="@dimen/margin_medium_2"
+                            android:textColor="@color/primary_text"
+                            />
+
+                        <TextView
+                            android:id="@+id/tvDeliveryFee"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="3,000"
+                            android:textColor="@color/primary_text"
+                            android:gravity="end"
+                            android:layout_marginEnd="@dimen/margin_medium_2"/>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/divider"
+                        android:layout_marginStart="@dimen/margin_medium"
+                        android:layout_marginEnd="@dimen/margin_medium"
+                        android:layout_marginTop="@dimen/margin_medium_2"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_medium_2">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/txt_lbl_total"
+                            android:textStyle="bold"
+                            android:textColor="@color/primary_text"
+                            />
+
+                        <TextView
+                            android:id="@+id/tvTotalPrice"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="48,000"
+                            android:textStyle="bold"
+                            android:textColor="@color/primary_text"
+                            android:gravity="end" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_medium_2"
+                android:layout_marginEnd="@dimen/margin_medium_2"
+                app:cardCornerRadius="@dimen/margin_medium">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rounded_corner_black_bg"
+                        android:text="@string/txt_lbl_address"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/text_regular"
+                        android:textStyle="bold"
+                        android:layout_marginTop="@dimen/margin_medium_2"
+                        android:layout_marginStart="@dimen/margin_medium_2"
+                        android:paddingStart="@dimen/margin_medium_2"
+                        android:paddingEnd="@dimen/margin_medium_2"
+                        android:paddingTop="@dimen/margin_small"
+                        android:paddingBottom="@dimen/margin_small"/>
+
+                    <TextView
+                        android:id="@+id/tvAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_medium_2"
+                        android:text="No 23, Yadanar Myaing st., Kamayut tsp., Yangon" />
+                </LinearLayout>
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_medium_2"
+                app:cardCornerRadius="@dimen/margin_medium">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/margin_medium_2">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/txt_lbl_payment_info"
+                        android:textStyle="bold"
+                        android:textColor="@color/primary_text"
+                        android:textSize="@dimen/text_regular"/>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnPay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/btn_lbl_pay"
+                        android:layout_gravity="center_horizontal"
+                        android:backgroundTint="@color/accent"
+                        android:layout_marginTop="@dimen/margin_medium_2"/>
+
+
+                </LinearLayout>
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+    </ScrollView>
 </FrameLayout>

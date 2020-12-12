@@ -3,12 +3,55 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragments.MedicineDialogFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_corner_black_bg"
+                android:text="@string/txt_lbl_medicine"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_regular"
+                android:textStyle="bold"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:layout_marginStart="@dimen/margin_medium_2"
+                android:paddingStart="@dimen/margin_medium_2"
+                android:paddingEnd="@dimen/margin_medium_2"
+                android:paddingTop="@dimen/margin_small"
+                android:paddingBottom="@dimen/margin_small"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvMedicines"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_medium"
+                tools:listitem="@layout/item_medicine"
+                tools:itemCount="3"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:backgroundTint="@color/accent"
+                android:layout_margin="@dimen/margin_medium_2"
+                android:textStyle="bold"
+                app:cornerRadius="@dimen/margin_medium"
+                android:text="@string/btn_lbl_close"/>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
 
 </FrameLayout>

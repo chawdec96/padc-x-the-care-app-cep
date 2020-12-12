@@ -2,6 +2,7 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'com.google.gms.google-services'
+apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion 30
@@ -51,5 +52,7 @@ dependencies {
     // Firebase
     implementation platform(rootProject.ext.firebaseLibraries.platforms)
     implementation rootProject.ext.firebaseLibraries.analytics
+
+    implementation "androidx.lifecycle:lifecycle-extensions:2.1.0"
 
 }

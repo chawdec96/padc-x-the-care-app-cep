@@ -3,12 +3,89 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragments.PatientInfoDialogFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@drawable/rounded_corner_bg">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:src="@drawable/dummy_chat"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_lbl_confirm_info"
+                android:textColor="@color/primary_text"
+                android:textSize="@dimen/text_regular_2x"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_corner_category_bg"
+                android:text="@string/txt_lbl_patient_info"
+                android:textSize="@dimen/text_regular"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:paddingTop="@dimen/margin_medium"
+                android:paddingBottom="@dimen/margin_medium"
+                android:paddingStart="@dimen/margin_medium_2"
+                android:paddingEnd="@dimen/margin_medium_2"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/margin_medium_2"/>
+
+            <include layout="@layout/viewpod_patient_info"
+                android:layout_margin="@dimen/margin_medium_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_corner_category_bg"
+                android:text="@string/txt_lbl_specific_questions"
+                android:textSize="@dimen/text_regular"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:paddingTop="@dimen/margin_medium"
+                android:paddingBottom="@dimen/margin_medium"
+                android:paddingStart="@dimen/margin_medium_2"
+                android:paddingEnd="@dimen/margin_medium_2"
+                android:layout_gravity="center_horizontal" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvSpecificQuestionWithAnswer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_medium"
+                tools:itemCount="5"
+                tools:listitem="@layout/item_specific_question_with_answer"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnConsult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="@dimen/margin_medium_2"
+                android:backgroundTint="@color/accent"
+                android:text="@string/btn_lbl_consult"
+                app:cornerRadius="@dimen/margin_medium"/>
+
+        </LinearLayout>
+
+
+
+    </ScrollView>
 
 </FrameLayout>

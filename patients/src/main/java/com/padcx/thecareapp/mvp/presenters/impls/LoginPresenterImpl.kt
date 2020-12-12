@@ -1,16 +1,24 @@
 package com.padcx.thecareapp.mvp.presenters.impls
 
-import android.content.Context
-import com.padcx.shared.AbstractBasePresenter
+import com.padcx.shared.data.models.AuthenticationModel
+import com.padcx.shared.data.models.AuthenticationModelImpl
+import com.padcx.shared.mvp.presenters.AbstractBasePresenter
 import com.padcx.thecareapp.mvp.presenters.LoginPresenter
 import com.padcx.thecareapp.mvp.views.LoginView
 
 class LoginPresenterImpl: LoginPresenter, AbstractBasePresenter<LoginView>() {
-    override fun onTapLogin(context: Context, email: String, password: String) {
-        TODO("Not yet implemented")
+
+    private val mAuthenticationModel: AuthenticationModel = AuthenticationModelImpl
+
+    override fun onTapLogin(email: String, password: String) {
+        mAuthenticationModel.patientLogin(email, password, onSuccess = {
+            mView?.navigateToHomeScreen()
+        }, onFailure = {
+            mView?.showError(it)
+        })
     }
 
     override fun onTapRegister() {
-        TODO("Not yet implemented")
+        mView?.navigateToRegistrationScreen()
     }
 }

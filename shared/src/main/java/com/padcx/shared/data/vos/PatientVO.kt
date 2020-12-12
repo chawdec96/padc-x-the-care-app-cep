@@ -9,5 +9,7 @@ data class PatientVO(
     var email: String ?= "",
     var password: String ?= "",
     var phone: String ?= "",
-    var image: String ?= ""
+    var image: String ?= "",
+    var recentDoctor: ArrayList<DoctorVO> ?= arrayListOf(),
+    var generalQuestions: ArrayList<QuestionTemplateVO> ?= arrayListOf()
 )

@@ -1,4 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <layer-list>
+            <item>
+                <shape>
+                    <gradient android:angle="90" android:endColor="#ffffff" android:startColor="#ffffff" android:type="linear" />
+                    <stroke android:width="0.5dp" android:color="@color/divider" />
 
+                    <corners android:radius="@dimen/margin_small" />
+                    <padding android:bottom="@dimen/margin_small" android:left="@dimen/margin_small" android:right="@dimen/margin_small" android:top="@dimen/margin_small" />
+                </shape>
+            </item>
+
+            <item
+                android:right="@dimen/margin_small"
+                android:drawable="@drawable/ic_baseline_arrow_drop_down_24"
+                android:gravity="center_vertical|right">
+            </item>
+        </layer-list>
+    </item>
 </selector>

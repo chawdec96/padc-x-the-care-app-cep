@@ -1,4 +1,9 @@
 package com.padcx.doctors.mvp.views
 
-interface LoginView {
+import com.padcx.shared.mvp.views.BaseView
+
+interface LoginView: BaseView {
+
+    fun navigateToHomeScreen()
+    fun navigateToRegisterScreen()
 }

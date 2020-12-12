@@ -1,14 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".fragments.ComfirmConsultationDialogFragment">
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:minWidth="300dp"
+    android:orientation="vertical"
+    android:paddingStart="@dimen/margin_medium_2"
+    android:paddingEnd="@dimen/margin_medium_2"
+    android:paddingBottom="@dimen/margin_medium_2"
+    app:cardCornerRadius="@dimen/margin_medium"
+    android:background="@drawable/rounded_corner_bg"
+    tools:context=".fragments.ConfirmConsultationDialogFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ImageView
+        android:id="@+id/ivDoctor"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="120dp"
+        android:src="@drawable/consult_with_doctor" />
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/tvConfirmationTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/txt_lbl_confirm_consultation"
+        android:textColor="@color/primary_text"
+        android:textSize="@dimen/text_regular"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:id="@+id/tvQuestionForRequest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_medium_2"
+        android:layout_marginBottom="@dimen/margin_medium_2"
+        android:lineSpacingMultiplier="1.3"
+        android:text="@string/txt_lbl_question_consultation"
+        android:textColor="@color/primary_text"
+        android:textSize="@dimen/text_small" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/margin_medium_2"
+            android:backgroundTint="@color/accent"
+            android:text="@string/btn_lbl_sure"
+            android:textSize="@dimen/text_small"
+            app:cornerRadius="@dimen/margin_medium" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnNotSure"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_medium_2"
+            android:layout_toStartOf="@id/btnSure"
+            android:backgroundTint="@color/accent"
+            android:text="@string/btn_lbl_no"
+            android:textColor="@color/accent"
+            android:textSize="@dimen/text_small"
+            app:cornerRadius="@dimen/margin_medium" />
+    </RelativeLayout>
+
+</LinearLayout>

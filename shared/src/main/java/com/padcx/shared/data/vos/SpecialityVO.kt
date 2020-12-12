@@ -1,11 +1,17 @@
 package com.padcx.shared.data.vos
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 import com.google.firebase.firestore.IgnoreExtraProperties
+import java.io.Serializable
 
 @IgnoreExtraProperties
+@Entity(tableName = "speciality")
 data class SpecialityVO(
-    var id: Int = 0,
+    @PrimaryKey(autoGenerate = false)
+    var id: String = " ",
     var name: String ?= "",
-    var specificQuestions: List<String> ?= arrayListOf(),
-    var medicines: List<String> ?= arrayListOf()
-)
+    var image: String ?= "",
+    var specificQuestions: ArrayList<SpecificQuestionVO> ?= arrayListOf(),
+    var medicines: ArrayList<MedicineVO> ?= arrayListOf()
+): Serializable

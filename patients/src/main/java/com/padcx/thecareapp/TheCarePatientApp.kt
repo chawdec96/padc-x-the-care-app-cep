@@ -1,13 +1,13 @@
 package com.padcx.thecareapp
 
 import android.app.Application
-import com.padcx.happy_food_delivery.data.models.FoodDeliveryModelImpl
+import com.padcx.shared.data.models.TheCareAppModelImpl
 
 class TheCarePatientApp: Application() {
 
     override fun onCreate() {
         super.onCreate()
 
-        FoodDeliveryModelImpl.initDatabase(applicationContext)
+        TheCareAppModelImpl.initDatabase(applicationContext)
     }
 }

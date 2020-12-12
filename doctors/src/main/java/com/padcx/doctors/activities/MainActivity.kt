@@ -1,11 +1,13 @@
 package com.padcx.doctors.activities
 
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import com.google.android.material.snackbar.Snackbar
 import android.view.Menu
 import android.view.MenuItem
 import com.padcx.doctors.R
-import com.padcx.shared.BaseActivity
+import com.padcx.shared.activities.BaseActivity
 
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -35,6 +37,12 @@ class MainActivity : BaseActivity() {
         return when (item.itemId) {
             R.id.action_settings -> true
             else -> super.onOptionsItemSelected(item)
+        }
+    }
+
+    companion object{
+        fun newIntent(context: Context) : Intent {
+            return Intent(context, MainActivity::class.java)
         }
     }
 }

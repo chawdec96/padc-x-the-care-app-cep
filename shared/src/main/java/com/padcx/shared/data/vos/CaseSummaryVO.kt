@@ -1,4 +1,14 @@
 package com.padcx.shared.data.vos
 
-class CaseSummaryVO {
-}
+import com.google.firebase.firestore.IgnoreExtraProperties
+
+@IgnoreExtraProperties
+data class CaseSummaryVO (
+    var allergicMedicine: String ?= "",
+    var bloodPressure: String ?= "",
+    var bloodType: String ?= "",
+    var dob: String ?= "",
+    var height: String ?= "",
+    var weight: String ?= "",
+    var case: String ?= ""
+)

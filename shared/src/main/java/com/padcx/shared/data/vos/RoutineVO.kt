@@ -1,4 +1,6 @@
 package com.padcx.shared.data.vos
 
-class RoutineVO {
-}
+data class RoutineVO(
+    var takingDays: Int = 0,
+    var takingTime: String ?= ""
+)

@@ -1,4 +1,10 @@
 package com.padcx.shared.data.vos
 
-class ConsultationRequestVO {
-}
+import com.google.firebase.firestore.IgnoreExtraProperties
+
+@IgnoreExtraProperties
+data class ConsultationRequestVO(
+    var patient: PatientVO = PatientVO(),
+    var type : String ?= "",
+    var caseSummary: CaseSummaryVO = CaseSummaryVO()
+)

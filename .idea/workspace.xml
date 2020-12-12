@@ -7,19 +7,39 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="90add18d-19ca-40e7-b018-c1f7e4db3d5b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/data/models/AuthenticationModelImpl.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/network/FirebaseApi.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/network/impls/FirebaseCloudFirestoreApiImpl.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/padcx/thecareapp/activities/LoginActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/padcx/thecareapp/activities/RegisterActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/padcx/thecareapp/mvp/presenters/LoginPresenter.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/padcx/thecareapp/mvp/presenters/RegisterPresenter.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/padcx/thecareapp/mvp/presenters/impls/LoginPresenterImpl.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/padcx/thecareapp/mvp/presenters/impls/RegisterPresenterImpl.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/padcx/thecareapp/mvp/views/LoginView.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/padcx/thecareapp/mvp/views/RegisterView.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_register.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/data/models/TheCareAppModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/data/models/TheCareAppModelImpl.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/data/vos/CaseSummaryVO.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/data/vos/ChatVO.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/data/vos/CheckOutVO.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/data/vos/ConsultationRequestVO.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/data/vos/ConsultationVO.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/data/vos/DeliveryRoutineVO.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/data/vos/DoctorVO.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/data/vos/MedicineVO.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/data/vos/PatientVO.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/data/vos/PrescriptionVO.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/data/vos/QuestionTemplateVO.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/data/vos/RoutineVO.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/data/vos/SpecialityVO.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/app.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/doctors/doctors.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/doctors/doctors.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/shared/shared.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/shared/shared.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraries.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/libraries.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/shared/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/data/models/AuthenticationModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/data/models/AuthenticationModel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/network/auth/AuthManagerImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/network/auth/FirebaseAuthManagerImpl.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/network/FirebaseApi.kt" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/network/FirebaseApi.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/network/impls/FirebaseCloudFirestoreApiImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/network/impls/FirebaseCloudFirestoreApiImpl.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,9 +63,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Kotlin File" />
-        <option value="Kotlin Class" />
         <option value="Kotlin Interface" />
         <option value="Kotlin Object" />
+        <option value="Kotlin Class" />
       </list>
     </option>
   </component>
@@ -71,6 +91,9 @@
       <recent name="com.padcx.doctors.activities" />
       <recent name="com.padcx.thecareapp.activities" />
       <recent name="com.padcx.thecareapp.fragments" />
+    </key>
+    <key name="android.template.1923214844">
+      <recent name="com.padcx.thecareapp.activities" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app" />
@@ -203,17 +226,25 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="419" y="134" key="#com.intellij.ide.util.MemberChooser" timestamp="1606463799000">
+    <state x="419" y="134" key="#com.intellij.ide.util.MemberChooser" timestamp="1606840480247">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="419" y="134" key="#com.intellij.ide.util.MemberChooser/0.0.1280.800@0.0.1280.800" timestamp="1606463799000" />
+    <state x="419" y="134" key="#com.intellij.ide.util.MemberChooser/0.0.1280.800@0.0.1280.800" timestamp="1606840480247" />
+    <state x="402" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1606839233762">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="402" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1280.800@0.0.1280.800" timestamp="1606839233762" />
     <state x="403" y="56" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog" timestamp="1606416518186">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="403" y="56" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog/0.0.1280.800@0.0.1280.800" timestamp="1606416518186" />
-    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup" timestamp="1606464045368">
+    <state x="310" y="195" key="com.intellij.ide.util.TipDialog" timestamp="1606831352502">
+      <screen x="0" y="0" width="1280" height="733" />
+    </state>
+    <state x="310" y="195" key="com.intellij.ide.util.TipDialog/0.0.1280.733@0.0.1280.733" timestamp="1606831352502" />
+    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup" timestamp="1606488279366">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup/0.0.1280.800@0.0.1280.800" timestamp="1606464045368" />
+    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup/0.0.1280.800@0.0.1280.800" timestamp="1606488279366" />
   </component>
 </project>

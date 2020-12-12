@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_margin="@dimen/margin_medium">
+
+    <TextView
+        android:id="@+id/tvQuestion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="သွားနှင့်ခံတွင်းဆိုင်ရာရောဂါများကို မကြာခဏ စစ်ဆေးဖူးပါသလား"
+        android:textColor="@color/primary_text"
+        android:textSize="@dimen/text_regular"
+        android:lineSpacingMultiplier="1.3"/>
+
+    <EditText
+        android:id="@+id/etAnswer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/primary_text"
+        android:hint="@string/edt_hint_lbl_answer"
+        android:paddingStart="@dimen/margin_medium"
+        android:textSize="@dimen/text_regular"
+        android:layout_marginTop="@dimen/margin_medium"/>
+
+
+</LinearLayout>

@@ -1,9 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/margin_medium_2"
     tools:context=".activities.RegisterActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <EditText
+        android:id="@+id/etName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Name"
+        android:paddingStart="@dimen/margin_medium"
+        android:textColor="@color/primary_text"
+        android:textSize="@dimen/text_regular" />
+
+    <EditText
+        android:id="@+id/etEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_medium_2"
+        android:hint="Enter Email"
+        android:paddingStart="@dimen/margin_medium"
+        android:textColor="@color/primary_text"
+        android:textSize="@dimen/text_regular" />
+
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_medium_2"
+        android:hint="Enter Password"
+        android:paddingStart="@dimen/margin_medium"
+        android:textColor="@color/primary_text"
+        android:textSize="@dimen/text_regular" />
+
+    <EditText
+        android:id="@+id/etPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_medium_2"
+        android:hint="Enter Phone"
+        android:paddingStart="@dimen/margin_medium"
+        android:textColor="@color/primary_text"
+        android:textSize="@dimen/text_regular" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_medium_2"
+        android:backgroundTint="@color/accent"
+        android:text="Register" />
+
+</LinearLayout>

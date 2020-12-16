@@ -18,8 +18,10 @@
     <EditText
         android:id="@+id/etAnswer"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/margin_xxlarge"
         android:textColor="@color/primary_text"
+        android:background="@drawable/rounded_corner_bg"
+        android:inputType="text"
         android:hint="@string/edt_hint_lbl_answer"
         android:paddingStart="@dimen/margin_medium"
         android:textSize="@dimen/text_regular"

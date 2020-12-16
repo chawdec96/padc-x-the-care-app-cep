@@ -56,5 +56,6 @@ dependencies {
     implementation rootProject.ext.firebaseLibraries.authentication
 
     implementation "androidx.lifecycle:lifecycle-extensions:2.1.0"
+    implementation rootProject.ext.libraries.gson
 
 }

@@ -5,7 +5,9 @@ import com.padcx.shared.data.vos.*
 interface FirebaseApi {
 
     fun registeredPatient(
-        email: String, password: String, username: String, phone: String, image: String
+        email: String, password: String, username: String, phone: String, image: String,
+        dob: String, height: String, bloodType: String, weight: String, bloodPressure: String,
+        allergicMedicine: String
     )
 //    fun setPatient(patientVO: PatientVO)
 //
@@ -36,8 +38,8 @@ interface FirebaseApi {
     )
 
     fun setRecentDoctorSubCollectionForAPatient(patientId: String,doctors: DoctorVO)
-
-    fun setGeneralQuestionSubCollectionForAPatine(patientId: String, questionTemplateVO: QuestionTemplateVO)
+    fun setGeneralQuestionSubCollectionForAPatient(patientId: String, questionTemplateVO: GeneralQuestionVO)
+    fun setSpecificQuestionsSubCollectionForAPatient(patientId: String, specificQuestionVO: List<SpecificQuestionVO>)
 
     fun setPrescriptionSubCollection(nodeName: String, documentId: String, prescriptionVO: PrescriptionVO)
 
@@ -48,6 +50,7 @@ interface FirebaseApi {
     fun getDoctors(onSuccess: (doctors: List<DoctorVO>) -> Unit, onFailure: (String) -> Unit)
 
     fun getPatients(onSuccess: (patients: List<PatientVO>) -> Unit, onFailure: (String) -> Unit)
+    fun getPatient(email: String, onSuccess:(patient: PatientVO) -> Unit, onFailure: (String) -> Unit )
 
     fun getSpecialities(
         onSuccess: (specialities: List<SpecialityVO>) -> Unit,
@@ -100,11 +103,12 @@ interface FirebaseApi {
 
     fun getSpecificQuestions(
         documentId: String,
-        onSuccess: (specificQuestions: List<QuestionTemplateVO>) -> Unit,
+        onSuccess: (specificQuestions: List<SpecificQuestionVO>) -> Unit,
         onFailure: (String) -> Unit
     )
 
     fun getRecentDoctorsForAPatient(patientId: String, onSuccess: (doctors: List<DoctorVO>) -> Unit, onFailure: (String) -> Unit)
 
-    fun getGeneralQuestionsForAPatient(patientId: String, onSuccess: (questions: List<QuestionTemplateVO>) -> Unit, onFailure: (String) -> Unit)
+    fun getGeneralQuestionsForAPatient(patientId: String, onSuccess: (questions: List<GeneralQuestionVO>) -> Unit, onFailure: (String) -> Unit)
+    fun getSpecificQuestionsForAPatient(patientId: String, onSuccess: (questions: List<SpecificQuestionVO>) -> Unit, onFailure: (String) -> Unit)
 }

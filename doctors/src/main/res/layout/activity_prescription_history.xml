@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.PrescriptionHistoryActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:title="@string/txt_lbl_prescription_history" />
+
+    <LinearLayout
+        android:id="@+id/llPatientName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:layout_marginStart="@dimen/margin_medium_2"
+        android:layout_marginTop="@dimen/margin_medium_2"
+        android:layout_marginEnd="@dimen/margin_medium_2">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/txt_lbl_patient_name"
+            android:textColor="@color/primary_text"
+            android:textSize="@dimen/text_regular" />
+
+        <TextView
+            android:id="@+id/tvPatientName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text=": Aung Aung"
+            android:textColor="@color/primary_text"
+            android:textSize="@dimen/text_regular" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llPatientDob"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/llPatientName"
+        android:layout_marginStart="@dimen/margin_medium_2"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_marginEnd="@dimen/margin_medium_2">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/txt_lbl_dob"
+            android:textColor="@color/primary_text"
+            android:textSize="@dimen/text_regular" />
+
+        <TextView
+            android:id="@+id/tvPatientDob"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text=": 23 Nov 2000"
+            android:textColor="@color/primary_text"
+            android:textSize="@dimen/text_regular" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llConsultDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/llPatientDob"
+        android:layout_marginStart="@dimen/margin_medium_2"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_marginEnd="@dimen/margin_medium_2">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/txt_lbl_consult_date"
+            android:textColor="@color/primary_text"
+            android:textSize="@dimen/text_regular" />
+
+        <TextView
+            android:id="@+id/tvConsultDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text=": 25 Dec 2020 Fri"
+            android:textColor="@color/primary_text"
+            android:textSize="@dimen/text_regular" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvHistory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/llConsultDate"
+        android:layout_marginStart="@dimen/margin_medium_2"
+        android:layout_marginTop="@dimen/margin_medium_2"
+        android:text="@string/txt_lbl_prescription_history"
+        android:textColor="@color/primary_text"
+        android:textSize="@dimen/text_regular_2x"
+        android:textStyle="bold" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/btnSave"
+        android:layout_below="@id/tvHistory"
+        android:layout_margin="@dimen/margin_medium_2"
+        android:background="@drawable/rounded_corner_bg">
+
+        <EditText
+            android:id="@+id/etRemark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_medium_2"
+            android:background="@android:color/white"
+            android:hint="ဆေးကုသမှု မှတ်တမ်း ရေးသားရန်"
+            android:textSize="@dimen/text_regular" />
+
+    </FrameLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="@dimen/margin_medium_2"
+        android:backgroundTint="@color/accent"
+        android:text="သိမ်းမည်" />
+
+
+</RelativeLayout>

@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="@dimen/margin_medium_2"
+    app:cardCornerRadius="@dimen/margin_medium">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/txt_lbl_appointment_req"
+                android:textStyle="bold"
+                android:layout_gravity="center_vertical"
+                android:textSize="@dimen/text_regular"
+                android:textColor="@color/primary_text"
+                android:layout_marginStart="@dimen/margin_medium_2"/>
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnNewPatient"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:backgroundTint="@color/orange"
+                    android:text="@string/btn_lbl_new_patient"
+                    android:textSize="@dimen/text_regular"
+                    android:textStyle="bold"
+                    app:cornerRadius="@dimen/margin_small"
+                    android:visibility="visible"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnOldPatient"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:visibility="gone"
+                    android:backgroundTint="@color/yellow"
+                    app:cornerRadius="@dimen/margin_small"
+                    android:text="@string/btn_lbl_old_patient"/>
+
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/divider"
+            android:layout_marginTop="@dimen/margin_medium"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.padcx.doctors.views.components.RoundedCornerImageView
+                android:id="@+id/ivPatientImage"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:cornerRadius="50dp"
+                android:src="@drawable/dummy_profile"
+                android:layout_marginStart="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_medium_2"/>
+
+            <TextView
+                android:id="@+id/tvPatientName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/ivPatientImage"
+                android:layout_marginStart="@dimen/margin_medium_2"
+                android:text="Aung Aung"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:textColor="@color/primary_text"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_regular"/>
+
+            <TextView
+                android:id="@+id/tvPatientDob"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="မွေးနေ့: 23 Nov 2000"
+                android:layout_alignStart="@id/tvPatientName"
+                android:layout_below="@id/tvPatientName"
+                android:textColor="@color/secondary_text"
+                android:textSize="@dimen/text_small"/>
+
+        </RelativeLayout>
+
+        <!-- For New Patient -->
+        <LinearLayout
+            android:id="@+id/llNewPatient"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_medium_2">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCancel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_lbl_cancel"
+                android:backgroundTint="@color/red"
+                app:cornerRadius="@dimen/margin_medium"
+                android:layout_marginEnd="@dimen/margin_medium_2"
+                android:layout_marginStart="@dimen/margin_medium"
+                android:layout_weight="1"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnAccept"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_lbl_accept"
+                android:backgroundTint="@color/accent"
+                app:cornerRadius="@dimen/margin_medium"
+                android:layout_marginStart="@dimen/margin_medium_2"
+                android:layout_marginEnd="@dimen/margin_medium"
+                android:layout_weight="1"/>
+
+
+        </LinearLayout>
+
+        <!-- for old patient -->
+        <LinearLayout
+            android:id="@+id/llOldPatient"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_margin="@dimen/margin_medium_2">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCallMeBack"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_lbl_call_me_back"
+                android:backgroundTint="@color/primary"
+                app:cornerRadius="@dimen/margin_medium"
+                android:layout_marginEnd="@dimen/margin_medium"
+                android:layout_weight="0.8"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnPostpone"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_lbl_postpone"
+                android:backgroundTint="@color/orange"
+                app:cornerRadius="@dimen/margin_medium"
+                android:layout_marginStart="@dimen/margin_medium"
+                android:layout_marginEnd="@dimen/margin_medium"
+                android:layout_weight="1.2"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnAcceptRequest"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_lbl_accept"
+                android:backgroundTint="@color/accent"
+                app:cornerRadius="@dimen/margin_medium"
+                android:layout_marginStart="@dimen/margin_medium"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

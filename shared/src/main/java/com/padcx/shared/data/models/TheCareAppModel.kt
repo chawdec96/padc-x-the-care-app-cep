@@ -11,11 +11,28 @@ interface TheCareAppModel {
     fun getSpecialitiesFromFirebaseAndSaveToDB(onFailure: (String) -> Unit)
     fun getSpecialities(): LiveData<List<SpecialityVO>>
 
+    fun getSpecificQuestions(
+        specialityId: String,
+        onSuccess: (specificQuestions: List<SpecificQuestionVO>) -> Unit,
+        onFailure: (String) -> Unit
+    )
+
     fun setDoctor(doctorVO: DoctorVO)
     fun getDoctors(onSuccess: (doctors: List<DoctorVO>) -> Unit, onFailure: (String) -> Unit)
 
-    fun setPatient(email: String, password: String, username: String, phone: String, image: String)
+    fun setPatient(
+        email: String, password: String, username: String, phone: String, image: String,
+        dob: String, height: String, bloodType: String, weight: String, bloodPressure: String,
+        allergicMedicine: String
+    )
     fun getPatients(onSuccess: (patients: List<PatientVO>) -> Unit, onFailure: (String) -> Unit)
+    fun getPatient(email: String, onSuccess: (patients: PatientVO) -> Unit, onFailure: (String) -> Unit)
+
+    fun setSpecificQuestions(patientId: String, questions: List<SpecificQuestionVO>)
+    fun getSpecificQuestionsForPatient(patientId: String, onSuccess: (specificQuestions: List<SpecificQuestionVO>) -> Unit, onFailure: (String) -> Unit)
+
+    fun setGeneralQuestions(documentId: String, questions: GeneralQuestionVO)
+    fun getGeneralQuestions(documentId: String, onSuccess: (questions: List<GeneralQuestionVO>) -> Unit, onFailure: (String) -> Unit)
 
     fun getQuestionsTemplateFromFirebaseAndSaveToDB(onFailure: (String) -> Unit)
     fun getQuestionsTemplate(): LiveData<List<QuestionTemplateVO>>

@@ -1,32 +1,40 @@
 package com.padcx.thecareapp.fragments
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.fragment.app.DialogFragment
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.padcx.shared.data.models.TheCareAppModel
+import com.padcx.shared.data.models.TheCareAppModelImpl
+import com.padcx.shared.data.vos.CaseSummaryVO
+import com.padcx.shared.data.vos.PatientVO
+import com.padcx.shared.data.vos.SpecificQuestionVO
 import com.padcx.thecareapp.R
+import com.padcx.thecareapp.activities.MainActivity
+import com.padcx.thecareapp.adapter.SpecificQuestionRecyclerAdapter
+import com.padcx.thecareapp.delegates.SpecificQuestionItemDelegate
+import kotlinx.android.synthetic.main.fragment_patient_info_dialog.*
+import kotlinx.android.synthetic.main.viewpod_patient_info.*
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
+class PatientInfoDialogFragment : DialogFragment(), SpecificQuestionItemDelegate {
 
-/**
- * A simple [Fragment] subclass.
- * Use the [PatientInfoDialogFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
-class PatientInfoDialogFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+    private var patient: PatientVO? = null
+    private var specialityId: String ?= ""
+    private var specificQuestions: List<SpecificQuestionVO>? = arrayListOf()
+
+    private lateinit var mSpecificQuestionRecyclerAdapter: SpecificQuestionRecyclerAdapter
+    private val mTheCareAppModel: TheCareAppModel = TheCareAppModelImpl
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
+            patient = it.getSerializable(ARG_PARAM_PATIENT) as PatientVO
+            specificQuestions = it.getParcelableArrayList(ARG_PARAM_SPECIFIC_QUESTIONS)
+            specialityId = it.getString(ARG_PARAM_SPECIALITY_ID)
         }
     }
 
@@ -38,23 +46,71 @@ class PatientInfoDialogFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_patient_info_dialog, container, false)
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        setUpRecycler()
+        bindPatientInfo()
+
+        setUpListener()
+    }
+
+    private fun setUpListener() {
+        btnConsult.setOnClickListener {
+            // create consultation request
+            // insert questions to patient
+            patient?.let { patient ->
+                mTheCareAppModel.setSpecificQuestions(patient.id, specificQuestions!!)
+                mTheCareAppModel.getSpecificQuestionsForPatient(patient.id, onSuccess = {
+                    patient.specificQuestions?.addAll(it)
+                },onFailure = {
+                    Log.d("Fail", "==> $it")
+                    Toast.makeText(this.requireContext(), it, Toast.LENGTH_SHORT).show()
+                })
+
+                mTheCareAppModel.addConsultationRequestByPatient(CaseSummaryVO(), patient, specialityId!!)
+                startActivity(MainActivity.newIntent(this.requireContext()))
+            }
+
+        }
+    }
+
+    private fun bindPatientInfo() {
+        tvPatientName.text = patient?.username
+        tvPatientDob.text = patient?.dob
+        tvPatientHeight.text = patient?.height
+        tvPatientBloodType.text = patient?.bloodType
+        tvPatientWeight.text = patient?.weight
+        tvPatientBloodPressure.text = patient?.bloodPressure
+        tvPatientAllergicMedicine.text = patient?.allergicMedicine
+    }
+
+    private fun setUpRecycler() {
+        mSpecificQuestionRecyclerAdapter = SpecificQuestionRecyclerAdapter(this, "answer")
+        mSpecificQuestionRecyclerAdapter.setNewData(specificQuestions!!)
+
+        rvSpecificQuestionWithAnswer.layoutManager = LinearLayoutManager(this.requireContext())
+        rvSpecificQuestionWithAnswer.adapter = mSpecificQuestionRecyclerAdapter
+    }
+
     companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment PatientInfoDialogFragment.
-         */
-        // TODO: Rename and change types and number of parameters
+
+        private const val ARG_PARAM_PATIENT = "ARG_PARAM_PATIENT"
+        private const val ARG_PARAM_SPECIFIC_QUESTIONS = "ARG_PARAM_SPECIFIC_QUESTIONS"
+        private const val ARG_PARAM_SPECIALITY_ID = "ARG_PARAM_SPECIALITY_ID"
+
         @JvmStatic
-        fun newInstance(param1: String, param2: String) =
+        fun newInstance(patient: PatientVO, specificQuestions: ArrayList<SpecificQuestionVO>, specialityId: String) =
             PatientInfoDialogFragment().apply {
                 arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
+                    putSerializable(ARG_PARAM_PATIENT, patient)
+                    putParcelableArrayList(ARG_PARAM_SPECIFIC_QUESTIONS, specificQuestions)
+                    putString(ARG_PARAM_SPECIALITY_ID, specialityId)
                 }
             }
+    }
+
+    override fun onTapAnswerEditText(specificQuestionVO: SpecificQuestionVO) {
+        TODO("Not yet implemented")
     }
 }

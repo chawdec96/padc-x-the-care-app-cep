@@ -26,10 +26,16 @@ class LoginActivity : BaseActivity(), LoginView {
 
     private fun setUpListener() {
         btnLogin.setOnClickListener {
-            mPresenter.onTapLogin("email", "password")
+            val email = etEmail.text.toString()
+            val password = etPassword.text.toString()
+
+            if (email.isNotEmpty() && password.isNotEmpty()){
+                mPresenter.onTapLogin(email, password)
+            }
+
         }
 
-        tv_register.setOnClickListener {
+        tvSignUp.setOnClickListener {
             mPresenter.onTapRegister()
         }
     }
@@ -41,6 +47,7 @@ class LoginActivity : BaseActivity(), LoginView {
 
     override fun navigateToHomeScreen() {
         startActivity(MainActivity.newIntent(this))
+        finish()
     }
 
     override fun navigateToRegistrationScreen() {

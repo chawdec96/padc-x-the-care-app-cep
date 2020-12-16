@@ -12,201 +12,95 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="90add18d-19ca-40e7-b018-c1f7e4db3d5b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_extensions_2_1_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_2_1_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_process_2_1_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_service_2_1_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_room_room_common_2_2_3_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_room_room_runtime_2_2_3_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_sqlite_sqlite_2_0_1_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_sqlite_sqlite_framework_2_0_1_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doctors/src/main/java/com/padcx/doctors/TheCareDoctorApp.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doctors/src/main/java/com/padcx/doctors/activities/ChatActivity.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doctors/src/main/java/com/padcx/doctors/activities/LoginActivity.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doctors/src/main/java/com/padcx/doctors/activities/RegisterActivity.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doctors/src/main/java/com/padcx/doctors/mvp/presenters/ChatPresenter.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doctors/src/main/java/com/padcx/doctors/mvp/presenters/LoginPresenter.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doctors/src/main/java/com/padcx/doctors/mvp/presenters/RegisterPresenter.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doctors/src/main/java/com/padcx/doctors/mvp/presenters/impls/ChatPresenterImpl.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doctors/src/main/java/com/padcx/doctors/mvp/presenters/impls/LoginPresenterImpl.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doctors/src/main/java/com/padcx/doctors/mvp/presenters/impls/RegisterPresenterImpl.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doctors/src/main/java/com/padcx/doctors/mvp/views/ChatView.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doctors/src/main/java/com/padcx/doctors/mvp/views/LoginView.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doctors/src/main/java/com/padcx/doctors/mvp/views/RegisterView.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doctors/src/main/res/layout/activity_chat.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doctors/src/main/res/layout/activity_login.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/patients/src/main/java/com/padcx/thecareapp/TheCarePatientApp.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/patients/src/main/java/com/padcx/thecareapp/activities/ChatActivity.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/patients/src/main/java/com/padcx/thecareapp/activities/CheckOutActivity.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/patients/src/main/java/com/padcx/thecareapp/activities/PatientInfoActivity.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/patients/src/main/java/com/padcx/thecareapp/adapter/SpecialityRecyclerAdapter.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/patients/src/main/java/com/padcx/thecareapp/delegates/SpecialityItemDelegate.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/patients/src/main/java/com/padcx/thecareapp/fragments/ConfirmConsultationDialogFragment.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/patients/src/main/java/com/padcx/thecareapp/fragments/MedicineDialogFragment.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/patients/src/main/java/com/padcx/thecareapp/fragments/PatientInfoDialogFragment.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/patients/src/main/java/com/padcx/thecareapp/fragments/ProfileFragment.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/patients/src/main/java/com/padcx/thecareapp/fragments/TakeOrderDialogFragment.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/patients/src/main/java/com/padcx/thecareapp/mvp/presenters/LoginPresenter.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/patients/src/main/java/com/padcx/thecareapp/mvp/presenters/PatientInfoPresenter.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/patients/src/main/java/com/padcx/thecareapp/mvp/presenters/RegisterPresenter.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/patients/src/main/java/com/padcx/thecareapp/mvp/presenters/impls/LoginPresenterImpl.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/patients/src/main/java/com/padcx/thecareapp/mvp/presenters/impls/PatientInfoPresenterImpl.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/patients/src/main/java/com/padcx/thecareapp/mvp/presenters/impls/RegisterPresenterImpl.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/patients/src/main/java/com/padcx/thecareapp/mvp/views/LoginView.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/patients/src/main/java/com/padcx/thecareapp/mvp/views/PatientInfoView.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/patients/src/main/java/com/padcx/thecareapp/mvp/views/RegisterView.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/patients/src/main/java/com/padcx/thecareapp/views/components/RoundedCornerImageView.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/patients/src/main/java/com/padcx/thecareapp/views/viewholders/SpecialityViewHolder.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/patients/src/main/res/drawable/attachment.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/patients/src/main/res/drawable/bg_spinner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/patients/src/main/res/drawable/checked.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/patients/src/main/res/drawable/consult_with_doctor.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/patients/src/main/res/drawable/custom_checkbox.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/patients/src/main/res/drawable/dummy_chat.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/patients/src/main/res/drawable/dummy_profile.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/patients/src/main/res/drawable/ic_baseline_add_circle_outline_24.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/patients/src/main/res/drawable/ic_baseline_arrow_drop_down_24.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/patients/src/main/res/drawable/ic_baseline_arrow_forward_24.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/patients/src/main/res/drawable/ic_baseline_home_24.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/patients/src/main/res/drawable/ic_baseline_person_pin_24.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/patients/src/main/res/drawable/ic_baseline_sms_24.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/patients/src/main/res/drawable/icons8_tooth_64.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/patients/src/main/res/drawable/rounded_corner_bg.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/patients/src/main/res/drawable/rounded_corner_black_bg.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/patients/src/main/res/drawable/rounded_corner_category_bg.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/patients/src/main/res/drawable/send_icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/patients/src/main/res/drawable/unchecked.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/patients/src/main/res/layout/activity_chat.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/patients/src/main/res/layout/activity_check_out.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/patients/src/main/res/layout/activity_patient_info.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/patients/src/main/res/layout/activity_register.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/patients/src/main/res/layout/fragment_comfirm_consultation_dialog.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/patients/src/main/res/layout/fragment_medicine_dialog.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/patients/src/main/res/layout/fragment_patient_info_dialog.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/patients/src/main/res/layout/fragment_profile.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/patients/src/main/res/layout/fragment_take_order_dialog.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/patients/src/main/res/layout/item_checkout_medicine.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/patients/src/main/res/layout/item_consultation.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/patients/src/main/res/layout/item_medicine.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/patients/src/main/res/layout/item_recent_doctor.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/patients/src/main/res/layout/item_speciality.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/patients/src/main/res/layout/item_specific_question.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/patients/src/main/res/layout/item_specific_question_with_answer.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/patients/src/main/res/layout/viewpod_patient_info.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/patients/src/main/res/menu/menu_bottom_navigation.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/patients/src/main/res/values/attrs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/adapters/BaseAdapter.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/data/dummyData/DummyData.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/data/models/BaseModel.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/data/vos/SpecificQuestionVO.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/persistence/daos/DoctorDao.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/persistence/daos/PatientDao.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/persistence/daos/TheCareDao.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/persistence/db/TheCareDB.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/persistence/typeconverters/CaseSummaryTypeConverter.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/persistence/typeconverters/ChatTypeConverter.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/persistence/typeconverters/DeliveryRoutineTypeConverter.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/persistence/typeconverters/DoctorTypeConverter.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/persistence/typeconverters/MedicineTypeConverter.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/persistence/typeconverters/PatientTypeConverter.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/persistence/typeconverters/PrescriptionTypeConverter.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/persistence/typeconverters/QuestionTemplateTypeConverter.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/persistence/typeconverters/RoutineTypeConverter.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/persistence/typeconverters/SpecificQuestionTypeConverter.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/utils/Constants.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/views/viewholders/BaseViewHolder.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doctors/src/main/java/com/padcx/doctors/activities/PatientInfoActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doctors/src/main/java/com/padcx/doctors/activities/PrescriptionHistoryActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doctors/src/main/java/com/padcx/doctors/activities/SpecificQuestionsActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doctors/src/main/java/com/padcx/doctors/views/components/RoundedCornerImageView.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doctors/src/main/res/drawable/attachment.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doctors/src/main/res/drawable/dummy_profile.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doctors/src/main/res/drawable/ic_baseline_arrow_forward_24.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doctors/src/main/res/drawable/ic_baseline_date_range_24.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doctors/src/main/res/drawable/rounded_corner_bg.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doctors/src/main/res/drawable/rounded_corner_category_bg.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doctors/src/main/res/drawable/send_icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doctors/src/main/res/layout/activity_patient_info.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doctors/src/main/res/layout/activity_prescription_history.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doctors/src/main/res/layout/activity_specific_questions.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doctors/src/main/res/layout/item_appointment.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doctors/src/main/res/layout/item_specific_question.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doctors/src/main/res/layout/item_specific_question_with_answer.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doctors/src/main/res/layout/viewpod_appointment_request.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doctors/src/main/res/layout/viewpod_patient_info.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doctors/src/main/res/values/attrs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/patients/src/main/java/com/padcx/thecareapp/adapter/SpecificQuestionRecyclerAdapter.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/patients/src/main/java/com/padcx/thecareapp/delegates/SpecificQuestionItemDelegate.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/patients/src/main/java/com/padcx/thecareapp/persistence/PatientPrefs.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/patients/src/main/java/com/padcx/thecareapp/views/viewholders/SpecificQuestionViewHolder.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/patients/src/main/java/com/padcx/thecareapp/views/viewholders/SpecificQuestionWithAnsViewHolder.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/data/vos/GeneralQuestionVO.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/persistence/typeconverters/GeneralQuestionsTypeConverter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/jarAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/patients.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/app/patients.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/patients.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules/doctors/doctors.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/doctors/doctors.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/shared/shared.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/shared/shared.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/patients/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/patients/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/google-services.json" beforeDir="false" afterPath="$PROJECT_DIR$/patients/google-services.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/proguard-rules.pro" beforeDir="false" afterPath="$PROJECT_DIR$/patients/proguard-rules.pro" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/padcx/thecareapp/ExampleInstrumentedTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/patients/src/androidTest/java/com/padcx/thecareapp/ExampleInstrumentedTest.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/patients/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/padcx/thecareapp/activities/LoginActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/patients/src/main/java/com/padcx/thecareapp/activities/LoginActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/padcx/thecareapp/activities/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/patients/src/main/java/com/padcx/thecareapp/activities/MainActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/padcx/thecareapp/activities/RegisterActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/patients/src/main/java/com/padcx/thecareapp/activities/RegisterActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/padcx/thecareapp/fragments/FirstFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/patients/src/main/java/com/padcx/thecareapp/fragments/HomeFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/padcx/thecareapp/fragments/SecondFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/patients/src/main/java/com/padcx/thecareapp/fragments/ConsultationsFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/padcx/thecareapp/mvp/presenters/LoginPresenter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/patients/src/main/java/com/padcx/thecareapp/mvp/presenters/ChatPresenter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/padcx/thecareapp/mvp/presenters/MainPresenter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/patients/src/main/java/com/padcx/thecareapp/mvp/presenters/MainPresenter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/padcx/thecareapp/mvp/presenters/RegisterPresenter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/patients/src/main/java/com/padcx/thecareapp/mvp/presenters/HomePresenter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/padcx/thecareapp/mvp/presenters/impls/LoginPresenterImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/patients/src/main/java/com/padcx/thecareapp/mvp/presenters/impls/ChatPresenterImpl.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/padcx/thecareapp/mvp/presenters/impls/MainPresenterImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/patients/src/main/java/com/padcx/thecareapp/mvp/presenters/impls/MainPresenterImpl.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/padcx/thecareapp/mvp/presenters/impls/RegisterPresenterImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/patients/src/main/java/com/padcx/thecareapp/mvp/presenters/impls/HomePresenterImpl.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/padcx/thecareapp/mvp/views/LoginView.kt" beforeDir="false" afterPath="$PROJECT_DIR$/patients/src/main/java/com/padcx/thecareapp/mvp/views/ChatView.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/padcx/thecareapp/mvp/views/MainView.kt" beforeDir="false" afterPath="$PROJECT_DIR$/patients/src/main/java/com/padcx/thecareapp/mvp/views/MainView.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/padcx/thecareapp/mvp/views/RegisterView.kt" beforeDir="false" afterPath="$PROJECT_DIR$/patients/src/main/java/com/padcx/thecareapp/mvp/views/HomeView.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/padcx/thecareapp/utils/Constants.kt" beforeDir="false" afterPath="$PROJECT_DIR$/patients/src/main/java/com/padcx/thecareapp/utils/Constants.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" beforeDir="false" afterPath="$PROJECT_DIR$/patients/src/main/res/drawable-v24/ic_launcher_foreground.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_launcher_background.xml" beforeDir="false" afterPath="$PROJECT_DIR$/patients/src/main/res/drawable/ic_launcher_background.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" beforeDir="false" afterPath="$PROJECT_DIR$/patients/src/main/res/layout/activity_login.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/patients/src/main/res/layout/activity_main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_register.xml" beforeDir="false" afterPath="$PROJECT_DIR$/doctors/src/main/res/layout/activity_register.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/content_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/patients/src/main/res/layout/content_main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_first.xml" beforeDir="false" afterPath="$PROJECT_DIR$/patients/src/main/res/layout/fragment_home.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_second.xml" beforeDir="false" afterPath="$PROJECT_DIR$/patients/src/main/res/layout/fragment_consultations.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/menu/menu_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/patients/src/main/res/menu/menu_main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" beforeDir="false" afterPath="$PROJECT_DIR$/patients/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" beforeDir="false" afterPath="$PROJECT_DIR$/patients/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/patients/src/main/res/mipmap-hdpi/ic_launcher.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher_round.png" beforeDir="false" afterPath="$PROJECT_DIR$/patients/src/main/res/mipmap-hdpi/ic_launcher_round.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/patients/src/main/res/mipmap-mdpi/ic_launcher.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher_round.png" beforeDir="false" afterPath="$PROJECT_DIR$/patients/src/main/res/mipmap-mdpi/ic_launcher_round.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/patients/src/main/res/mipmap-xhdpi/ic_launcher.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" beforeDir="false" afterPath="$PROJECT_DIR$/patients/src/main/res/mipmap-xhdpi/ic_launcher_round.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/patients/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" beforeDir="false" afterPath="$PROJECT_DIR$/patients/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/patients/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" beforeDir="false" afterPath="$PROJECT_DIR$/patients/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/navigation/nav_graph.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/patients/src/main/res/values/colors.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" beforeDir="false" afterPath="$PROJECT_DIR$/patients/src/main/res/values/dimens.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/patients/src/main/res/values/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/patients/src/main/res/values/styles.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/java/com/padcx/thecareapp/ExampleUnitTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/patients/src/test/java/com/padcx/thecareapp/ExampleUnitTest.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/doctors/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/doctors/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/doctors/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/doctors/src/main/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/doctors/src/main/java/com/padcx/doctors/activities/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/doctors/src/main/java/com/padcx/doctors/activities/MainActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctors/src/main/java/com/padcx/doctors/mvp/presenters/MainPresenter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/doctors/src/main/java/com/padcx/doctors/mvp/presenters/MainPresenter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctors/src/main/java/com/padcx/doctors/mvp/presenters/impls/MainPresenterImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/doctors/src/main/java/com/padcx/doctors/mvp/presenters/impls/MainPresenterImpl.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctors/src/main/java/com/padcx/doctors/mvp/views/MainView.kt" beforeDir="false" afterPath="$PROJECT_DIR$/doctors/src/main/java/com/padcx/doctors/mvp/views/MainView.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/shared/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/AbstractBasePresenter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/mvp/presenters/AbstractBasePresenter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/BaseActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/activities/BaseActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/BasePresenter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/mvp/presenters/BasePresenter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/BaseView.kt" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/mvp/views/BaseView.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctors/src/main/java/com/padcx/doctors/fragments/FirstFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/doctors/src/main/java/com/padcx/doctors/fragments/FirstFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctors/src/main/java/com/padcx/doctors/fragments/SecondFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/doctors/src/main/java/com/padcx/doctors/fragments/SecondFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctors/src/main/res/layout/activity_chat.xml" beforeDir="false" afterPath="$PROJECT_DIR$/doctors/src/main/res/layout/activity_chat.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctors/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/doctors/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctors/src/main/res/layout/content_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/doctors/src/main/res/layout/content_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctors/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/doctors/src/main/res/values/colors.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctors/src/main/res/values/dimens.xml" beforeDir="false" afterPath="$PROJECT_DIR$/doctors/src/main/res/values/dimens.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctors/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/doctors/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctors/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/doctors/src/main/res/values/styles.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patients/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/patients/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patients/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/patients/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patients/src/main/java/com/padcx/thecareapp/TheCarePatientApp.kt" beforeDir="false" afterPath="$PROJECT_DIR$/patients/src/main/java/com/padcx/thecareapp/TheCarePatientApp.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patients/src/main/java/com/padcx/thecareapp/activities/LoginActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/patients/src/main/java/com/padcx/thecareapp/activities/LoginActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patients/src/main/java/com/padcx/thecareapp/activities/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/patients/src/main/java/com/padcx/thecareapp/activities/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patients/src/main/java/com/padcx/thecareapp/activities/PatientInfoActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/patients/src/main/java/com/padcx/thecareapp/activities/PatientInfoActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patients/src/main/java/com/padcx/thecareapp/activities/RegisterActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/patients/src/main/java/com/padcx/thecareapp/activities/RegisterActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patients/src/main/java/com/padcx/thecareapp/fragments/PatientInfoDialogFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/patients/src/main/java/com/padcx/thecareapp/fragments/PatientInfoDialogFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patients/src/main/java/com/padcx/thecareapp/mvp/presenters/MainPresenter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/patients/src/main/java/com/padcx/thecareapp/mvp/presenters/MainPresenter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patients/src/main/java/com/padcx/thecareapp/mvp/presenters/PatientInfoPresenter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/patients/src/main/java/com/padcx/thecareapp/mvp/presenters/PatientInfoPresenter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patients/src/main/java/com/padcx/thecareapp/mvp/presenters/RegisterPresenter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/patients/src/main/java/com/padcx/thecareapp/mvp/presenters/RegisterPresenter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patients/src/main/java/com/padcx/thecareapp/mvp/presenters/impls/LoginPresenterImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/patients/src/main/java/com/padcx/thecareapp/mvp/presenters/impls/LoginPresenterImpl.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patients/src/main/java/com/padcx/thecareapp/mvp/presenters/impls/MainPresenterImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/patients/src/main/java/com/padcx/thecareapp/mvp/presenters/impls/MainPresenterImpl.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patients/src/main/java/com/padcx/thecareapp/mvp/presenters/impls/PatientInfoPresenterImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/patients/src/main/java/com/padcx/thecareapp/mvp/presenters/impls/PatientInfoPresenterImpl.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patients/src/main/java/com/padcx/thecareapp/mvp/presenters/impls/RegisterPresenterImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/patients/src/main/java/com/padcx/thecareapp/mvp/presenters/impls/RegisterPresenterImpl.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patients/src/main/java/com/padcx/thecareapp/mvp/views/MainView.kt" beforeDir="false" afterPath="$PROJECT_DIR$/patients/src/main/java/com/padcx/thecareapp/mvp/views/MainView.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patients/src/main/java/com/padcx/thecareapp/mvp/views/PatientInfoView.kt" beforeDir="false" afterPath="$PROJECT_DIR$/patients/src/main/java/com/padcx/thecareapp/mvp/views/PatientInfoView.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patients/src/main/res/layout/activity_login.xml" beforeDir="false" afterPath="$PROJECT_DIR$/patients/src/main/res/layout/activity_login.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patients/src/main/res/layout/activity_patient_info.xml" beforeDir="false" afterPath="$PROJECT_DIR$/patients/src/main/res/layout/activity_patient_info.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patients/src/main/res/layout/activity_register.xml" beforeDir="false" afterPath="$PROJECT_DIR$/patients/src/main/res/layout/activity_register.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patients/src/main/res/layout/fragment_patient_info_dialog.xml" beforeDir="false" afterPath="$PROJECT_DIR$/patients/src/main/res/layout/fragment_patient_info_dialog.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patients/src/main/res/layout/item_specific_question.xml" beforeDir="false" afterPath="$PROJECT_DIR$/patients/src/main/res/layout/item_specific_question.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patients/src/main/res/layout/item_specific_question_with_answer.xml" beforeDir="false" afterPath="$PROJECT_DIR$/patients/src/main/res/layout/item_specific_question_with_answer.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/data/models/AuthenticationModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/data/models/AuthenticationModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/data/models/AuthenticationModelImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/data/models/AuthenticationModelImpl.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/data/models/TheCareAppModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/data/models/TheCareAppModel.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/data/models/TheCareAppModelImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/data/models/TheCareAppModelImpl.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/data/vos/CaseSummaryVO.kt" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/data/vos/CaseSummaryVO.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/data/vos/ChatVO.kt" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/data/vos/ChatVO.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/data/vos/CheckOutVO.kt" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/data/vos/CheckOutVO.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/data/vos/ConsultationRequestVO.kt" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/data/vos/ConsultationRequestVO.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/data/vos/ConsultationVO.kt" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/data/vos/ConsultationVO.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/data/vos/DeliveryRoutineVO.kt" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/data/vos/DeliveryRoutineVO.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/data/vos/DoctorVO.kt" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/data/vos/DoctorVO.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/data/vos/MedicineVO.kt" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/data/vos/MedicineVO.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/data/vos/PatientVO.kt" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/data/vos/PatientVO.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/data/vos/PrescriptionVO.kt" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/data/vos/PrescriptionVO.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/data/vos/QuestionTemplateVO.kt" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/data/vos/QuestionTemplateVO.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/data/vos/RoutineVO.kt" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/data/vos/RoutineVO.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/data/vos/SpecialityVO.kt" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/data/vos/SpecialityVO.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/data/vos/SpecificQuestionVO.kt" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/data/vos/SpecificQuestionVO.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/network/FirebaseApi.kt" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/network/FirebaseApi.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/network/auth/AuthManager.kt" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/network/auth/AuthManager.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/network/auth/FirebaseAuthManagerImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/network/auth/FirebaseAuthManagerImpl.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/network/impls/FirebaseCloudFirestoreApiImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/network/impls/FirebaseCloudFirestoreApiImpl.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/persistence/db/TheCareDB.kt" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/persistence/db/TheCareDB.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -233,9 +127,9 @@
         <option value="Kotlin File" />
         <option value="valueResourceFile" />
         <option value="resourceFile" />
-        <option value="Kotlin Interface" />
-        <option value="Kotlin Class" />
         <option value="layoutResourceFile" />
+        <option value="Kotlin Class" />
+        <option value="Kotlin Interface" />
       </list>
     </option>
   </component>
@@ -250,11 +144,11 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="Pixel_3_XL_API_27" />
-    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2020-12-05T06:32:34.054Z" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2020-12-15T17:38:10.473Z" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/patients/src/main/res/drawable" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/doctors/src/main/res/layout" />
     <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
   </component>
   <component name="RecentsManager">
@@ -267,6 +161,7 @@
     </key>
     <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
       <recent name="com.padcx.shared.persistence.typeconverters" />
+      <recent name="com.padcx.doctors.views.components" />
       <recent name="com.padcx.thecareapp.views.components" />
       <recent name="com.padcx.doctors" />
       <recent name="com.padcx.thecareapp" />
@@ -277,16 +172,22 @@
     <key name="android.template.-822890085">
       <recent name="com.padcx.thecareapp.activities" />
     </key>
+    <key name="android.template.-556277852">
+      <recent name="com.padcx.doctors.activities" />
+    </key>
+    <key name="android.template.399391502">
+      <recent name="com.padcx.doctors.activities" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/doctors/src/main/res/layout" />
+      <recent name="$PROJECT_DIR$/doctors/src/main/res/drawable" />
+      <recent name="$PROJECT_DIR$/doctors/src/main/res/values" />
+      <recent name="$PROJECT_DIR$/patients/src/main/res/drawable" />
+      <recent name="$PROJECT_DIR$/patients/src/main/res/layout" />
+    </key>
     <key name="android.template.175285947">
       <recent name="com.padcx.doctors.activities" />
       <recent name="com.padcx.thecareapp.activities" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/patients/src/main/res/drawable" />
-      <recent name="$PROJECT_DIR$/patients/src/main/res/layout" />
-      <recent name="$PROJECT_DIR$/patients/src/main/res/values" />
-      <recent name="$PROJECT_DIR$/app" />
-      <recent name="$PROJECT_DIR$/shared/src/main/java/com/padcx/shared" />
     </key>
   </component>
   <component name="RunManager" selected="Android App.app">
@@ -418,10 +319,10 @@
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="267" y="207" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.800@0.0.1280.800" timestamp="1607617620553" />
-    <state x="419" y="134" key="#com.intellij.ide.util.MemberChooser" timestamp="1607749166980">
+    <state x="419" y="134" key="#com.intellij.ide.util.MemberChooser" timestamp="1608051765702">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="419" y="134" key="#com.intellij.ide.util.MemberChooser/0.0.1280.800@0.0.1280.800" timestamp="1607749166980" />
+    <state x="419" y="134" key="#com.intellij.ide.util.MemberChooser/0.0.1280.800@0.0.1280.800" timestamp="1608051765702" />
     <state x="402" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1606839233762">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
@@ -434,181 +335,179 @@
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="403" y="56" width="479" height="687" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog/0.0.1280.800@0.0.1280.800" timestamp="1607096790420" />
-    <state x="472" y="265" key="AndroidCreateXmlResourceDialog" timestamp="1607800972293">
+    <state x="472" y="265" key="AndroidCreateXmlResourceDialog" timestamp="1607846213980">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="472" y="265" key="AndroidCreateXmlResourceDialog/0.0.1280.800@0.0.1280.800" timestamp="1607800972293" />
-    <state width="1238" height="260" key="GridCell.Tab.0.bottom" timestamp="1607749542073">
-      <screen x="0" y="0" width="1280" height="800" />
+    <state x="472" y="265" key="AndroidCreateXmlResourceDialog/0.0.1280.800@0.0.1280.800" timestamp="1607846213980" />
+    <state width="1238" height="201" key="GridCell.Tab.0.bottom" timestamp="1608054345913">
+      <screen x="0" y="0" width="1280" height="733" />
     </state>
-    <state width="1238" height="212" key="GridCell.Tab.0.bottom/0.0.1280.733@0.0.1280.733" timestamp="1607749425614" />
+    <state width="1238" height="251" key="GridCell.Tab.0.bottom/0.0.1280.731@0.0.1280.731" timestamp="1608048832292" />
+    <state width="1238" height="201" key="GridCell.Tab.0.bottom/0.0.1280.733@0.0.1280.733" timestamp="1608054345913" />
     <state width="1238" height="203" key="GridCell.Tab.0.bottom/0.0.1280.734@0.0.1280.734" timestamp="1607103459485" />
-    <state width="1238" height="260" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1607749542073" />
-    <state width="1238" height="260" key="GridCell.Tab.0.center" timestamp="1607749542072">
-      <screen x="0" y="0" width="1280" height="800" />
+    <state width="1238" height="251" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1608049208343" />
+    <state width="1238" height="201" key="GridCell.Tab.0.center" timestamp="1608054345912">
+      <screen x="0" y="0" width="1280" height="733" />
     </state>
-    <state width="1238" height="212" key="GridCell.Tab.0.center/0.0.1280.733@0.0.1280.733" timestamp="1607749425613" />
+    <state width="1238" height="251" key="GridCell.Tab.0.center/0.0.1280.731@0.0.1280.731" timestamp="1608048832290" />
+    <state width="1238" height="201" key="GridCell.Tab.0.center/0.0.1280.733@0.0.1280.733" timestamp="1608054345912" />
     <state width="1238" height="203" key="GridCell.Tab.0.center/0.0.1280.734@0.0.1280.734" timestamp="1607103459483" />
-    <state width="1238" height="260" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1607749542072" />
-    <state width="1238" height="260" key="GridCell.Tab.0.left" timestamp="1607749542070">
-      <screen x="0" y="0" width="1280" height="800" />
+    <state width="1238" height="251" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1608049208342" />
+    <state width="1238" height="201" key="GridCell.Tab.0.left" timestamp="1608054345911">
+      <screen x="0" y="0" width="1280" height="733" />
     </state>
-    <state width="1238" height="212" key="GridCell.Tab.0.left/0.0.1280.733@0.0.1280.733" timestamp="1607749425612" />
+    <state width="1238" height="251" key="GridCell.Tab.0.left/0.0.1280.731@0.0.1280.731" timestamp="1608048832283" />
+    <state width="1238" height="201" key="GridCell.Tab.0.left/0.0.1280.733@0.0.1280.733" timestamp="1608054345911" />
     <state width="1238" height="203" key="GridCell.Tab.0.left/0.0.1280.734@0.0.1280.734" timestamp="1607103459481" />
-    <state width="1238" height="260" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1607749542070" />
-    <state width="1238" height="260" key="GridCell.Tab.0.right" timestamp="1607749542072">
-      <screen x="0" y="0" width="1280" height="800" />
+    <state width="1238" height="251" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1608049208341" />
+    <state width="1238" height="201" key="GridCell.Tab.0.right" timestamp="1608054345912">
+      <screen x="0" y="0" width="1280" height="733" />
     </state>
-    <state width="1238" height="212" key="GridCell.Tab.0.right/0.0.1280.733@0.0.1280.733" timestamp="1607749425614" />
+    <state width="1238" height="251" key="GridCell.Tab.0.right/0.0.1280.731@0.0.1280.731" timestamp="1608048832292" />
+    <state width="1238" height="201" key="GridCell.Tab.0.right/0.0.1280.733@0.0.1280.733" timestamp="1608054345912" />
     <state width="1238" height="203" key="GridCell.Tab.0.right/0.0.1280.734@0.0.1280.734" timestamp="1607103459484" />
-    <state width="1238" height="260" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1607749542072" />
-    <state width="1238" height="252" key="GridCell.Tab.1.bottom" timestamp="1607241205133">
-      <screen x="0" y="0" width="1280" height="800" />
+    <state width="1238" height="251" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1608049208343" />
+    <state width="1238" height="251" key="GridCell.Tab.1.bottom" timestamp="1608053919371">
+      <screen x="0" y="0" width="1280" height="733" />
     </state>
-    <state width="1238" height="252" key="GridCell.Tab.1.bottom/0.0.1280.733@0.0.1280.733" timestamp="1607240158838" />
-    <state width="1238" height="252" key="GridCell.Tab.1.bottom/0.0.1280.800@0.0.1280.800" timestamp="1607241205133" />
-    <state width="1238" height="252" key="GridCell.Tab.1.center" timestamp="1607241205131">
-      <screen x="0" y="0" width="1280" height="800" />
+    <state width="1238" height="251" key="GridCell.Tab.1.bottom/0.0.1280.731@0.0.1280.731" timestamp="1608048873750" />
+    <state width="1238" height="251" key="GridCell.Tab.1.bottom/0.0.1280.733@0.0.1280.733" timestamp="1608053919371" />
+    <state width="1238" height="251" key="GridCell.Tab.1.bottom/0.0.1280.800@0.0.1280.800" timestamp="1608049208345" />
+    <state width="1238" height="251" key="GridCell.Tab.1.center" timestamp="1608053919370">
+      <screen x="0" y="0" width="1280" height="733" />
     </state>
-    <state width="1238" height="252" key="GridCell.Tab.1.center/0.0.1280.733@0.0.1280.733" timestamp="1607240158836" />
-    <state width="1238" height="252" key="GridCell.Tab.1.center/0.0.1280.800@0.0.1280.800" timestamp="1607241205131" />
-    <state width="1238" height="252" key="GridCell.Tab.1.left" timestamp="1607241205131">
-      <screen x="0" y="0" width="1280" height="800" />
+    <state width="1238" height="251" key="GridCell.Tab.1.center/0.0.1280.731@0.0.1280.731" timestamp="1608048873748" />
+    <state width="1238" height="251" key="GridCell.Tab.1.center/0.0.1280.733@0.0.1280.733" timestamp="1608053919370" />
+    <state width="1238" height="251" key="GridCell.Tab.1.center/0.0.1280.800@0.0.1280.800" timestamp="1608049208345" />
+    <state width="1238" height="251" key="GridCell.Tab.1.left" timestamp="1608053919369">
+      <screen x="0" y="0" width="1280" height="733" />
     </state>
-    <state width="1238" height="252" key="GridCell.Tab.1.left/0.0.1280.733@0.0.1280.733" timestamp="1607240158835" />
-    <state width="1238" height="252" key="GridCell.Tab.1.left/0.0.1280.800@0.0.1280.800" timestamp="1607241205131" />
-    <state width="1238" height="252" key="GridCell.Tab.1.right" timestamp="1607241205132">
-      <screen x="0" y="0" width="1280" height="800" />
+    <state width="1238" height="251" key="GridCell.Tab.1.left/0.0.1280.731@0.0.1280.731" timestamp="1608048873747" />
+    <state width="1238" height="251" key="GridCell.Tab.1.left/0.0.1280.733@0.0.1280.733" timestamp="1608053919369" />
+    <state width="1238" height="251" key="GridCell.Tab.1.left/0.0.1280.800@0.0.1280.800" timestamp="1608049208344" />
+    <state width="1238" height="251" key="GridCell.Tab.1.right" timestamp="1608053919370">
+      <screen x="0" y="0" width="1280" height="733" />
     </state>
-    <state width="1238" height="252" key="GridCell.Tab.1.right/0.0.1280.733@0.0.1280.733" timestamp="1607240158837" />
-    <state width="1238" height="252" key="GridCell.Tab.1.right/0.0.1280.800@0.0.1280.800" timestamp="1607241205132" />
-    <state x="310" y="213" key="com.intellij.ide.util.TipDialog" timestamp="1607508514903">
+    <state width="1238" height="251" key="GridCell.Tab.1.right/0.0.1280.731@0.0.1280.731" timestamp="1608048873749" />
+    <state width="1238" height="251" key="GridCell.Tab.1.right/0.0.1280.733@0.0.1280.733" timestamp="1608053919370" />
+    <state width="1238" height="251" key="GridCell.Tab.1.right/0.0.1280.800@0.0.1280.800" timestamp="1608049208345" />
+    <state x="310" y="195" key="com.intellij.ide.util.TipDialog" timestamp="1608080870413">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="310" y="195" key="com.intellij.ide.util.TipDialog/0.0.1280.733@0.0.1280.733" timestamp="1607056009357" />
-    <state x="310" y="213" key="com.intellij.ide.util.TipDialog/0.0.1280.800@0.0.1280.800" timestamp="1607508514903" />
-    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup" timestamp="1607701821887">
+    <state x="310" y="195" key="com.intellij.ide.util.TipDialog/0.0.1280.800@0.0.1280.800" timestamp="1608080870413" />
+    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup" timestamp="1608046525684">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup/0.0.1280.800@0.0.1280.800" timestamp="1607701821887" />
+    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup/0.0.1280.800@0.0.1280.800" timestamp="1608046525684" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/patients/src/main/java/com/padcx/thecareapp/mvp/presenters/impls/MainPresenterImpl.kt</url>
-          <line>21</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/patients/src/main/java/com/padcx/thecareapp/mvp/presenters/impls/MainPresenterImpl.kt</url>
-          <line>27</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/data/models/TheCareAppModelImpl.kt</url>
-          <line>15</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/data/models/TheCareAppModelImpl.kt</url>
-          <line>17</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/data/models/TheCareAppModelImpl.kt</url>
-          <line>22</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/patients/src/main/java/com/padcx/thecareapp/mvp/presenters/impls/MainPresenterImpl.kt</url>
-          <line>20</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/data/models/TheCareAppModelImpl.kt</url>
-          <line>14</line>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
           <url>file://$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/network/impls/FirebaseCloudFirestoreApiImpl.kt</url>
-          <line>306</line>
+          <line>364</line>
           <option name="timeStamp" value="11" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
           <url>file://$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/network/impls/FirebaseCloudFirestoreApiImpl.kt</url>
-          <line>304</line>
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/network/impls/FirebaseCloudFirestoreApiImpl.kt</url>
-          <line>322</line>
+          <line>380</line>
           <option name="timeStamp" value="13" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
           <url>file://$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/network/impls/FirebaseCloudFirestoreApiImpl.kt</url>
-          <line>308</line>
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/network/impls/FirebaseCloudFirestoreApiImpl.kt</url>
-          <line>315</line>
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/network/impls/FirebaseCloudFirestoreApiImpl.kt</url>
-          <line>316</line>
-          <option name="timeStamp" value="16" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/network/impls/FirebaseCloudFirestoreApiImpl.kt</url>
-          <line>317</line>
-          <option name="timeStamp" value="18" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/network/impls/FirebaseCloudFirestoreApiImpl.kt</url>
-          <line>319</line>
-          <option name="timeStamp" value="19" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/patients/src/main/java/com/padcx/thecareapp/mvp/presenters/impls/MainPresenterImpl.kt</url>
-          <line>38</line>
-          <option name="timeStamp" value="23" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/patients/src/main/java/com/padcx/thecareapp/mvp/presenters/impls/MainPresenterImpl.kt</url>
-          <line>44</line>
-          <option name="timeStamp" value="24" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/patients/src/main/java/com/padcx/thecareapp/mvp/presenters/impls/MainPresenterImpl.kt</url>
-          <line>57</line>
-          <option name="timeStamp" value="25" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/network/impls/FirebaseCloudFirestoreApiImpl.kt</url>
-          <line>117</line>
+          <line>132</line>
           <option name="timeStamp" value="26" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
           <url>file://$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/network/impls/FirebaseCloudFirestoreApiImpl.kt</url>
-          <line>121</line>
+          <line>136</line>
           <option name="timeStamp" value="27" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
           <url>file://$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/network/impls/FirebaseCloudFirestoreApiImpl.kt</url>
-          <line>122</line>
+          <line>137</line>
           <option name="timeStamp" value="28" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
           <url>file://$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/network/impls/FirebaseCloudFirestoreApiImpl.kt</url>
-          <line>169</line>
+          <line>186</line>
           <option name="timeStamp" value="29" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
           <url>file://$PROJECT_DIR$/shared/src/main/java/com/padcx/shared/network/impls/FirebaseCloudFirestoreApiImpl.kt</url>
-          <line>709</line>
+          <line>799</line>
           <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/patients/src/main/java/com/padcx/thecareapp/mvp/presenters/impls/MainPresenterImpl.kt</url>
+          <line>26</line>
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/patients/src/main/java/com/padcx/thecareapp/mvp/presenters/impls/MainPresenterImpl.kt</url>
+          <line>27</line>
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/patients/src/main/java/com/padcx/thecareapp/activities/PatientInfoActivity.kt</url>
+          <line>287</line>
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/patients/src/main/java/com/padcx/thecareapp/activities/PatientInfoActivity.kt</url>
+          <line>291</line>
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/patients/src/main/java/com/padcx/thecareapp/fragments/PatientInfoDialogFragment.kt</url>
+          <line>105</line>
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/patients/src/main/java/com/padcx/thecareapp/fragments/PatientInfoDialogFragment.kt</url>
+          <line>106</line>
+          <option name="timeStamp" value="39" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/patients/src/main/java/com/padcx/thecareapp/fragments/PatientInfoDialogFragment.kt</url>
+          <line>35</line>
+          <option name="timeStamp" value="40" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/patients/src/main/java/com/padcx/thecareapp/fragments/PatientInfoDialogFragment.kt</url>
+          <line>34</line>
+          <option name="timeStamp" value="41" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/patients/src/main/java/com/padcx/thecareapp/fragments/PatientInfoDialogFragment.kt</url>
+          <line>89</line>
+          <option name="timeStamp" value="42" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/patients/src/main/java/com/padcx/thecareapp/adapter/SpecificQuestionRecyclerAdapter.kt</url>
+          <line>24</line>
+          <option name="timeStamp" value="43" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/patients/src/main/java/com/padcx/thecareapp/views/viewholders/SpecificQuestionWithAnsViewHolder.kt</url>
+          <line>10</line>
+          <option name="timeStamp" value="44" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/patients/src/main/java/com/padcx/thecareapp/views/viewholders/SpecificQuestionWithAnsViewHolder.kt</url>
+          <line>11</line>
+          <option name="timeStamp" value="45" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/patients/src/main/java/com/padcx/thecareapp/views/viewholders/SpecificQuestionViewHolder.kt</url>
+          <line>14</line>
+          <option name="timeStamp" value="46" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/patients/src/main/java/com/padcx/thecareapp/views/viewholders/SpecificQuestionViewHolder.kt</url>
+          <line>23</line>
+          <option name="timeStamp" value="47" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

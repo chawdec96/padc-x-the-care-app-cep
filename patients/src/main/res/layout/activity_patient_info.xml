@@ -113,7 +113,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/txt_lbl_dob"
                     android:textColor="@color/primary_text"
-                    android:visibility="visible"
+                    android:visibility="gone"
                     android:textSize="@dimen/text_regular"/>
 
                 <LinearLayout
@@ -122,7 +122,7 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:weightSum="3"
-                    android:visibility="visible"
+                    android:visibility="gone"
                     android:layout_marginTop="@dimen/margin_medium">
 
                     <androidx.appcompat.widget.AppCompatSpinner
@@ -160,7 +160,7 @@
                     android:text="@string/txt_lbl_height"
                     android:textSize="@dimen/text_regular"
                     android:textColor="@color/primary_text"
-                    android:visibility="visible"
+                    android:visibility="gone"
                     android:layout_marginTop="@dimen/margin_medium_2"/>
 
                 <EditText
@@ -170,7 +170,7 @@
                     android:background="@drawable/rounded_corner_bg"
                     android:layout_marginTop="@dimen/margin_medium"
                     android:hint="eg. 5.8 ft"
-                    android:visibility="visible"
+                    android:visibility="gone"
                     android:textSize="@dimen/text_regular"
                     android:paddingStart="@dimen/margin_medium_2"/>
 
@@ -181,7 +181,7 @@
                     android:text="@string/txt_lbl_blood_type"
                     android:textSize="@dimen/text_regular"
                     android:textColor="@color/primary_text"
-                    android:visibility="visible"
+                    android:visibility="gone"
                     android:layout_marginTop="@dimen/margin_medium_2"/>
 
                 <androidx.appcompat.widget.AppCompatSpinner
@@ -189,14 +189,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/margin_xxlarge"
                     style="@style/SpinnerTheme"
-                    android:visibility="visible"
+                    android:visibility="gone"
                     android:layout_marginTop="@dimen/margin_medium"/>
 
                 <FrameLayout
                     android:id="@+id/llStep1Summary"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:visibility="gone"
+                    android:visibility="visible"
                     android:paddingTop="@dimen/margin_medium"
                     android:paddingBottom="@dimen/margin_medium"
                     android:background="@drawable/rounded_corner_bg">
@@ -250,14 +250,14 @@
                     android:text="@string/txt_lbl_allergic_medicine"
                     android:textSize="@dimen/text_regular"
                     android:textColor="@color/primary_text"
-                    android:visibility="visible"
+                    android:visibility="gone"
                     android:layout_marginTop="@dimen/margin_medium_2"/>
 
                 <FrameLayout
                     android:id="@+id/flAllergicMedicine"
                     android:layout_width="match_parent"
                     android:layout_height="120dp"
-                    android:visibility="visible"
+                    android:visibility="gone"
                     android:background="@drawable/rounded_corner_bg"
                     android:layout_marginTop="@dimen/margin_medium">
 

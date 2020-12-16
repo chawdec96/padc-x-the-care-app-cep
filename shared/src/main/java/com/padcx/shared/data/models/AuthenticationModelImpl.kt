@@ -45,4 +45,8 @@ object AuthenticationModelImpl: AuthenticationModel {
     ) {
         mAuthManager.doctorRegister(email, password, username, phone, onSuccess, onFailure)
     }
+
+    override fun getUserEmail(): String {
+        return mAuthManager.getUserEmail()
+    }
 }

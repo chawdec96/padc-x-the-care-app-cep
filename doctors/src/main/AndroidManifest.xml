@@ -10,7 +10,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.ChatActivity"></activity>
+        <activity android:name=".activities.PrescriptionHistoryActivity"></activity>
+        <activity android:name=".activities.SpecificQuestionsActivity" />
+        <activity android:name=".activities.PatientInfoActivity" />
+        <activity android:name=".activities.ChatActivity" />
         <activity android:name=".activities.RegisterActivity" />
         <activity android:name=".activities.LoginActivity" />
         <activity

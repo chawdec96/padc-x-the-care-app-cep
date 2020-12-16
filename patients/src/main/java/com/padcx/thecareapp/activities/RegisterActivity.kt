@@ -10,6 +10,7 @@ import com.padcx.thecareapp.R
 import com.padcx.thecareapp.mvp.presenters.RegisterPresenter
 import com.padcx.thecareapp.mvp.presenters.impls.RegisterPresenterImpl
 import com.padcx.thecareapp.mvp.views.RegisterView
+import kotlinx.android.synthetic.main.activity_register.*
 
 class RegisterActivity : BaseActivity(), RegisterView {
 
@@ -25,10 +26,17 @@ class RegisterActivity : BaseActivity(), RegisterView {
     }
 
     private fun setUpListener() {
-        //TODO tap for btnRegister
-        mPresenter.onTapRegister(
-            "email", "username", "password", "phone", "image"
-        )
+        btnRegister.setOnClickListener {
+            val email = etEmail.text.toString()
+            val phone = etPhone.text.toString()
+            val username = etName.text.toString()
+            val password = etPassword.text.toString()
+
+            if (email.isNotEmpty() && phone.isNotEmpty() && username.isNotEmpty() && password.isNotEmpty()){
+                mPresenter.onTapRegister(email, username, password, phone, "", "", "","",
+                "", "", "")
+            }
+        }
         
     }
 

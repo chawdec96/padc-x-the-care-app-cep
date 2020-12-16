@@ -21,13 +21,23 @@ class RegisterPresenterImpl: RegisterPresenter, AbstractBasePresenter<RegisterVi
         username: String,
         password: String,
         phone: String,
-        image: String
+        image: String,
+        dob: String,
+        height: String,
+        bloodType: String,
+        weight: String,
+        bloodPressure: String,
+        allergicMedicine: String
     ) {
-        mAuthenticationModelImpl.patientLogin(email, password, onSuccess = {
+        mAuthenticationModelImpl.patientRegister(email, password, username, phone,onSuccess = {
+            mFirebaseCloudFirebaseApi.registeredPatient(
+                email, password, username, phone, image,
+                dob, height, bloodType, weight, bloodPressure, allergicMedicine
+            )
             mView?.navigateToLoginScreen()
-            mFirebaseCloudFirebaseApi.registeredPatient(email, password, username, phone, image)
         }, onFailure = {
             mView?.showError(it)
         })
     }
+
 }

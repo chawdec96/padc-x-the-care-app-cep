@@ -3,13 +3,12 @@ package com.padcx.thecareapp.activities
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
 import com.padcx.shared.activities.BaseActivity
-import com.padcx.shared.data.vos.SpecialityVO
+import com.padcx.shared.data.vos.*
 import com.padcx.thecareapp.R
 import com.padcx.thecareapp.fragments.ConsultationsFragment
 import com.padcx.thecareapp.fragments.HomeFragment
@@ -17,11 +16,13 @@ import com.padcx.thecareapp.fragments.ProfileFragment
 import com.padcx.thecareapp.mvp.presenters.MainPresenter
 import com.padcx.thecareapp.mvp.presenters.impls.MainPresenterImpl
 import com.padcx.thecareapp.mvp.views.MainView
+import com.padcx.thecareapp.persistence.PatientPrefs
 import kotlinx.android.synthetic.main.content_main.*
 
 class MainActivity : BaseActivity(), MainView {
 
     private lateinit var mPresenter: MainPresenter
+    private lateinit var patientVO: PatientVO
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,11 +30,13 @@ class MainActivity : BaseActivity(), MainView {
 //        setSupportActionBar(findViewById(R.id.toolbar))
 
         setUpPresenter()
-//        mPresenter.onUIReady(this)
-//        mPresenter.broadcastConsultationRequest(dummyCaseSummary, dummyPatient, "SP01")
-//        mPresenter.setCheckOut(dummyPrescriptionList, dummyDeliveryRoutine, dummyDoctor, dummyPatient,
-//            "12/12/2020", "address", "SP01")
-//        mPresenter.chatMessage("CONS001", dummyChatFromPatient)
+
+        patientVO = PatientPrefs.getUserInfo()
+        mPresenter.onUIReady(this, patientVO.id)
+
+//        mPresenter.getRecentlyDoctors(this, patientVO.id)
+//        mPresenter.getGeneralQuestions(this, patientVO.id)
+
         loadFragment(HomeFragment.newInstance())
         setUpBottomNavigation()
 
@@ -96,8 +99,11 @@ class MainActivity : BaseActivity(), MainView {
             .commit()
     }
 
-    override fun showSpecialities(specialities: List<SpecialityVO>) {
-        //TODO set the data to the recyclerview
-        Log.d(TAG, "==> $specialities")
+    override fun addGeneralQuestionsToPatientVO(questions: List<GeneralQuestionVO>) {
+        patientVO.generalQuestions?.addAll(questions)
+    }
+
+    override fun addRecentlyDoctorsToPatientVO(doctors: List<DoctorVO>) {
+        patientVO.recentDoctor?.addAll(doctors)
     }
 }

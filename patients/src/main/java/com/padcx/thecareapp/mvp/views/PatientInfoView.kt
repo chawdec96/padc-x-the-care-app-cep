@@ -6,8 +6,9 @@ import com.padcx.shared.mvp.views.BaseView
 
 interface PatientInfoView: BaseView {
 
-    fun showPatientInfo(patientVO: PatientVO)
-    fun showSpecificQuestions(SpecificQuestions: List<SpecificQuestionVO>)
-    fun navigateToChatScreen()
+    fun showPatientInfo()
+    fun showSpecificQuestions(specificQuestions: List<SpecificQuestionVO>)
+    fun addSpecificQuestionsWithAnswer(specificQuestionVO: SpecificQuestionVO)
+    fun showPatientInfoDialog(patientVO: PatientVO)
 
 }

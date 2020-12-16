@@ -13,7 +13,8 @@ import com.padcx.shared.persistence.typeconverters.*
 
 @Database(entities = [CheckOutVO::class, SpecialityVO::class, QuestionTemplateVO::class, DoctorVO::class, ConsultationVO::class], version = 2, exportSchema = false)
 @TypeConverters(PrescriptionTypeConverter::class, ChatTypeConverter::class, MedicineTypeConverter::class, QuestionTemplateTypeConverter::class,
-CaseSummaryTypeConverter::class, DoctorTypeConverter::class, PatientTypeConverter::class, RoutineTypeConverter::class, DeliveryRoutineTypeConverter::class, SpecificQuestionTypeConverter::class)
+CaseSummaryTypeConverter::class, DoctorTypeConverter::class, PatientTypeConverter::class, RoutineTypeConverter::class, DeliveryRoutineTypeConverter::class, SpecificQuestionTypeConverter::class,
+GeneralQuestionsTypeConverter::class)
 abstract class TheCareDB: RoomDatabase() {
 
     companion object{

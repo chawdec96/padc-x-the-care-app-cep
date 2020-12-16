@@ -13,4 +13,6 @@ interface AuthenticationModel {
     // Doctor Authentication
     fun doctorLogin(email: String, password: String, onSuccess: () -> Unit, onFailure: (String) -> Unit)
     fun doctorRegistration(email: String, password: String, username: String, phone: String, onSuccess: () -> Unit, onFailure: (String) -> Unit)
+
+    fun getUserEmail(): String
 }

@@ -9,4 +9,29 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="txt_lbl_appointment_history">ရက်ချိန်းယူမှု မှတ်တမ်းများ</string>
+    <string name="txt_lbl_appointment_req">ရက်ချိန်းယူခြင်းတောင်းဆိုမှု</string>
+    <string name="btn_lbl_new_patient">လူနာအသစ်</string>
+    <string name="btn_lbl_old_patient">ဆွေးနွေးခဲ့ဖူးသောလူနာ</string>
+    <string name="btn_lbl_cancel">ကျော်မည်</string>
+    <string name="btn_lbl_accept">လက်ခံမည်</string>
+    <string name="btn_lbl_call_me_back">နောက်မှ</string>
+    <string name="btn_lbl_postpone">အချိန်ရွေ့မည်</string>
+    <string name="txt_lbl_send_text">စာပို့မည်</string>
+    <string name="txt_lbl_medicine_history">ဆေးမှတ်တမ်း</string>
+    <string name="txt_lbl_medicine">ဆေးညွှန်း</string>
+    <string name="txt_lbl_remark">မှတ်ချက်</string>
+    <string name="txt_lbl_patient_info">လူနာအချက်အလက်များ</string>
+    <string name="txt_lbl_dob">မွေးနေ့</string>
+    <string name="txt_lbl_height">အရပ်</string>
+    <string name="txt_lbl_blood_type">သွေးအမျိုးအစား</string>
+    <string name="txt_lbl_weight">ခန္ဓာကိုယ်အလေးချိန်</string>
+    <string name="txt_lbl_blood_pressure">သွေးပေါင်ချိန်</string>
+    <string name="txt_lbl_allergic_medicine">မတည့်သောဆေး</string>
+    <string name="txt_lbl_patient_name">လူနာအမည်</string>
+    <string name="txt_lbl_specific_questions">ရောဂါဆိုင်ရာမေးခွန်းမျာ</string>
+    <string name="btn_lbl_start_consult">ဆွေးနွေးမှု စတင်မည်</string>
+    <string name="txt_lbl_questions">မေးခွန်းများ</string>
+    <string name="txt_lbl_consult_date">ဆွေးနွေးမှုပြုလုပ်သည့်ရက်စွဲ</string>
+    <string name="txt_lbl_prescription_history">ဆေးကုသမှု မှတ်တမ်း</string>
 </resources>

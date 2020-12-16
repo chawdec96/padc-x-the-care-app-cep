@@ -80,4 +80,8 @@ object FirebaseAuthManagerImpl: AuthManager {
             }
         }
     }
+
+    override fun getUserEmail(): String {
+        return mFirebaseAuth.currentUser?.email ?: ""
+    }
 }

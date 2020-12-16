@@ -9,6 +9,8 @@ interface RegisterPresenter :
     fun onTapLogin()
     fun onTapRegister(
         email: String, username: String, password: String,
-        phone: String, image: String
+        phone: String, image: String, dob: String, height: String,
+        bloodType: String, weight: String, bloodPressure: String,
+        allergicMedicine: String
     )
 }

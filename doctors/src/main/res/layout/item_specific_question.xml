@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rounded_corner_bg"
+    android:layout_margin="@dimen/margin_medium"
+    >
+
+    <TextView
+        android:id="@+id/tvSpecificQuestion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/margin_medium_2"
+        android:paddingBottom="@dimen/margin_medium_2"
+        android:text="သွားကို မကြာခဏ သန့်ရှင်းရေးလုပ်ဖြစ်လား။"
+        android:paddingStart="@dimen/margin_medium_2"/>
+
+
+</FrameLayout>

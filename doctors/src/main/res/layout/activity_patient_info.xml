@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.PatientInfoActivity">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_medium_2"
+        app:cardCornerRadius="@dimen/margin_medium">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.padcx.doctors.views.components.RoundedCornerImageView
+                    android:id="@+id/ivPatientImage"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    app:cornerRadius="70dp"
+                    android:src="@drawable/dummy_profile"
+                    android:layout_marginTop="@dimen/margin_medium_2"
+                    android:layout_marginStart="@dimen/margin_medium_2"/>
+
+                <include layout="@layout/viewpod_patient_info"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txt_lbl_specific_questions"
+                    android:textSize="@dimen/text_regular"
+                    android:textColor="@color/primary_text"
+                    android:background="@color/divider"
+                    android:paddingTop="@dimen/margin_medium"
+                    android:paddingBottom="@dimen/margin_medium"
+                    android:paddingStart="@dimen/margin_medium_2"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvSpecificQuestions"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_medium"
+                    tools:itemCount="4"
+                    tools:listitem="@layout/item_specific_question_with_answer" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/btn_lbl_start_consult"
+                    android:backgroundTint="@color/accent"
+                    android:textColor="@android:color/white"
+                    app:cornerRadius="@dimen/margin_medium"
+                    android:layout_margin="@dimen/margin_medium_2"/>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</FrameLayout>

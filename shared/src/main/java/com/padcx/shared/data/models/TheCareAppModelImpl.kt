@@ -23,6 +23,14 @@ object TheCareAppModelImpl : TheCareAppModel, BaseModel() {
         return mTheCareDB.theCareDao().getSpecialities()
     }
 
+    override fun getSpecificQuestions(
+        specialityId: String,
+        onSuccess: (specificQuestions: List<SpecificQuestionVO>) -> Unit,
+        onFailure: (String) -> Unit
+    ) {
+        mFirebaseApi.getSpecificQuestions(specialityId, onSuccess, onFailure)
+    }
+
     override fun setDoctor(doctorVO: DoctorVO) {
 //        mFirebaseApi.setDoctor(doctorVO)
     }
@@ -39,10 +47,15 @@ object TheCareAppModelImpl : TheCareAppModel, BaseModel() {
     }
 
     override fun setPatient(
-        email: String, password: String, username: String, phone: String, image: String
+        email: String, password: String, username: String, phone: String, image: String,
+        dob: String, height: String, bloodType: String, weight: String, bloodPressure: String,
+        allergicMedicine: String
     ) {
 
-        mFirebaseApi.registeredPatient(email, password, username, phone, image)
+        mFirebaseApi.registeredPatient(
+            email, password, username, phone, image,
+            dob, height, bloodType, weight, bloodPressure, allergicMedicine
+        )
     }
 
     override fun getPatients(
@@ -51,6 +64,38 @@ object TheCareAppModelImpl : TheCareAppModel, BaseModel() {
     ) {
         TODO("Not yet implemented")
         //Get data and Save to database
+    }
+
+    override fun getPatient(
+        email: String,
+        onSuccess: (patients: PatientVO) -> Unit,
+        onFailure: (String) -> Unit
+    ) {
+        mFirebaseApi.getPatient(email, onSuccess, onFailure)
+    }
+
+    override fun setSpecificQuestions(patientId: String, questions: List<SpecificQuestionVO>) {
+        mFirebaseApi.setSpecificQuestionsSubCollectionForAPatient(patientId, questions)
+    }
+
+    override fun getSpecificQuestionsForPatient(
+        patientId: String,
+        onSuccess: (specificQuestions: List<SpecificQuestionVO>) -> Unit,
+        onFailure: (String) -> Unit
+    ) {
+        mFirebaseApi.getSpecificQuestionsForAPatient(patientId, onSuccess, onFailure)
+    }
+
+    override fun setGeneralQuestions(documentId: String, question: GeneralQuestionVO) {
+        mFirebaseApi.setGeneralQuestionSubCollectionForAPatient(documentId, question)
+    }
+
+    override fun getGeneralQuestions(
+        documentId: String,
+        onSuccess: (questions: List<GeneralQuestionVO>) -> Unit,
+        onFailure: (String) -> Unit
+    ) {
+        mFirebaseApi.getGeneralQuestionsForAPatient(documentId, onSuccess, onFailure)
     }
 
     override fun getQuestionsTemplateFromFirebaseAndSaveToDB(

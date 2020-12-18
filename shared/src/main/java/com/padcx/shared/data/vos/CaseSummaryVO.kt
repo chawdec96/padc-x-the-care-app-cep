@@ -4,6 +4,10 @@ import com.google.firebase.firestore.IgnoreExtraProperties
 
 @IgnoreExtraProperties
 data class CaseSummaryVO (
+    var id: String ?= "",
+    var question: String ?= "",
+    var answer: String ?= "",
+    var type: String ?= "",
     var allergicMedicine: String ?= "",
     var bloodPressure: String ?= "",
     var bloodType: String ?= "",

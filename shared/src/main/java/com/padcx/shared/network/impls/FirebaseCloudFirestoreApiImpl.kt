@@ -3,6 +3,7 @@ package com.padcx.shared.network.impls
 import android.util.Log
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
+import com.google.gson.Gson
 import com.padcx.shared.data.vos.*
 import com.padcx.shared.network.FirebaseApi
 import com.padcx.shared.utils.NODE_PATIENTS
@@ -10,47 +11,6 @@ import com.padcx.shared.utils.NODE_PATIENTS
 object FirebaseCloudFirestoreApiImpl : FirebaseApi {
 
     private val db = Firebase.firestore
-    /*
-    override fun setPatient(patientVO: PatientVO) {
-        val patientMap = hashMapOf(
-            "name" to patientVO.username,
-            "email" to patientVO.email,
-            "phone" to patientVO.phone,
-            "image" to patientVO.image
-        )
-
-        db.collection("patients")
-            .add(patientMap)
-            .addOnSuccessListener { documentReference ->
-                val id = documentReference.id
-                db.collection("patients").document(id).update("pId", id)
-                Log.d("Success", "Successfully added a patient") }
-            .addOnFailureListener { Log.d("Failure", "Failed to add a patient") }
-    }
-
-    override fun setDoctor(doctor: DoctorVO) {
-        val doctorMap = hashMapOf(
-            "name" to doctor.name,
-            "email" to doctor.email,
-            "phone" to doctor.phone,
-            "image" to doctor.image,
-            "speciality" to doctor.speciality,
-            "experience" to doctor.experience,
-            "doctorSignature" to doctor.doctorSignature,
-            "degree" to doctor.degree,
-            "university" to doctor.university
-        )
-
-        db.collection("doctors")
-            .add(doctorMap)
-            .addOnSuccessListener { documentReference ->
-                val id = documentReference.id
-                db.collection("doctors").document(id).update("dId", id)
-                Log.d("Success", "Successfully added a doctor") }
-            .addOnFailureListener { Log.d("Failure", "Failed to add a doctor") }
-    }
-
-     */
 
     override fun registeredPatient(
         email: String,
@@ -103,10 +63,12 @@ object FirebaseCloudFirestoreApiImpl : FirebaseApi {
         university: String
     ) {
         val doctorMap = hashMapOf(
+            "id" to "D$phone",
             "name" to username,
             "email" to email,
             "phone" to phone,
             "image" to image,
+            "password" to password,
             "speciality" to speciality,
             "experience" to experience,
             "doctorSignature" to doctorSignature,
@@ -115,61 +77,133 @@ object FirebaseCloudFirestoreApiImpl : FirebaseApi {
         )
 
         db.collection("doctors")
-            .add(doctorMap)
+            .document("D$phone")
+            .set(doctorMap)
             .addOnSuccessListener { documentReference ->
-                val id = documentReference.id
-                db.collection("doctors").document(id).update("dId", id)
+//                val id = documentReference.id
+//                db.collection("doctors").document(id).update("dId", id)
                 Log.d("Success", "Successfully added a doctor")
             }
             .addOnFailureListener { Log.d("Failure", "Failed to add a doctor") }
     }
 
+    /*
     override fun setConsultationRequestByPatient(
         caseSummaryVO: CaseSummaryVO,
         patientVO: PatientVO,
         specialityId: String
     ) {
 
-        val consultationMap = hashMapOf<String, Any>(
-            "speciality_id" to specialityId
+        val consultationMap = hashMapOf(
+            "speciality_id" to specialityId,
+            "reqId" to "REQ${patientVO.phone}",
+            "patient" to patientVO
         )
 
-        consultationMap["case_summary"] = caseSummaryData(caseSummaryVO)
-        consultationMap["patient"] = patientData(patientVO)
+//        consultationMap["case_summary"] = caseSummaryData(caseSummaryVO)
+//        consultationMap["patient"] = patientData(patientVO)
 
         db.collection("consultation_request")
-            .add(consultationMap)
+            .document("REQ${patientVO.phone}")
+            .set(consultationMap)
             .addOnSuccessListener { documentReference ->
-                val id = documentReference.id
-                //save id to SharedPreference
-                db.collection("consultation_request").document(id).update("consReqId", id)
+//                val id = documentReference.id
+//                //save id to SharedPreference
+//                db.collection("consultation_request").document(id).update("consReqId", id)
                 Log.d("Success", "Successfully added a Request")
             }
             .addOnFailureListener { Log.d("Failure", "Failed to add a Request") }
 
 
     }
+     */
 
-    override fun setConsultationByDoctor(
-        caseSummaryVO: CaseSummaryVO,
-        doctorVO: DoctorVO,
-        patientVO: PatientVO,
-        prescriptionVO: List<PrescriptionVO>,
-        type: String,
-        chat: List<ChatVO>
-    ) {
-        val consultationMap = hashMapOf<String, Any>(
-            "speciality_id" to type
+    override fun setConsultationRequest(consultationRequestVO: ConsultationRequestVO) {
+        val consultationMap = hashMapOf(
+            "specialityId" to consultationRequestVO.specialityId,
+            "reqId" to consultationRequestVO.id,
+            "patient" to consultationRequestVO.patient,
+            "isAccept" to consultationRequestVO.isAccept
         )
 
-        consultationMap["case_summary"] = caseSummaryData(caseSummaryVO)
+        db.collection("consultation_request")
+            .document(consultationRequestVO.id!!)
+            .set(consultationMap)
+            .addOnSuccessListener { Log.d("Success", "Successfully update a request") }
+            .addOnFailureListener { Log.d("Failure", "Failed to update a request") }
+    }
+
+    override fun setCaseSummarySubCollection(
+        nodeName: String, documentId: String, caseSummaryVO: CaseSummaryVO
+    ) {
+        val caseSummaryMap = hashMapOf(
+            "sId" to caseSummaryVO.id,
+            "question" to caseSummaryVO.question,
+            "answer" to caseSummaryVO.answer,
+            "type" to caseSummaryVO.type
+        )
+
+        db.collection(nodeName)
+            .document(documentId)
+            .collection("caseSummary")
+            .document(caseSummaryVO.id!!)
+            .set(caseSummaryMap)
+            .addOnSuccessListener {  Log.d("Success", "Successfully add Case Summary")}
+            .addOnFailureListener { Log.d ("Failure", "Failed to add Case Summary")}
+
+    }
+
+    override fun getCaseSummarySubCollection(
+        documentId: String,
+        onSuccess: (caseSummary: List<CaseSummaryVO>) -> Unit,
+        onFailure: (String) -> Unit
+    ) {
+        db.collection("consultation_request/$documentId/caseSummary")
+            .addSnapshotListener { value, error ->
+                error?.let {
+                    onFailure(it?.localizedMessage)
+                } ?: run {
+                    val result = value?.documents ?: arrayListOf()
+
+                    val caseSummaryList: MutableList<CaseSummaryVO> = arrayListOf()
+
+                    for (document in result){
+                        val data = document.data
+
+                        val caseSummaryVO = CaseSummaryVO()
+
+                        caseSummaryVO.id = data?.get("sId") as String
+                        caseSummaryVO.type = data["type"] as String
+                        caseSummaryVO.question = data["question"] as String
+                        caseSummaryVO.answer = data["answer"] as String
+
+                        caseSummaryList.add(caseSummaryVO)
+                    }
+
+                    onSuccess(caseSummaryList)
+                }
+            }
+    }
+
+    override fun setConsultationByDoctor(
+        doctorVO: DoctorVO, patientVO: PatientVO, type: String, isStart: Boolean
+    ) {
+        val consultationMap = hashMapOf(
+            "id" to "CON${doctorVO.phone}",
+            "speciality_id" to type,
+            "patient" to patientVO,
+            "doctor" to doctorVO,
+            "isStart" to isStart
+        )
+
         consultationMap["patient"] = patientData(patientVO)
 
         db.collection("consultations")
-            .add(consultationMap)
+            .document("CON${doctorVO.phone}")
+            .set(consultationMap)
             .addOnSuccessListener { documentReference ->
-                val id = documentReference.id
-                db.collection("consultations").document(id).update("consId", id)
+//                val id = documentReference.id
+//                db.collection("consultations").document(id).update("consId", id)
                 Log.d("Success", "Successfully added a Consultation")
             }
             .addOnFailureListener { Log.d("Failure", "Failed to add a Consultation") }
@@ -239,12 +273,19 @@ object FirebaseCloudFirestoreApiImpl : FirebaseApi {
 
     override fun setSpecificQuestionsSubCollectionForAPatient(
         patientId: String,
-        specificQuestions: List<SpecificQuestionVO>
+        specificQuestion: SpecificQuestionVO
     ) {
+
+        val map = hashMapOf(
+            "id" to specificQuestion.id,
+            "sentence" to specificQuestion.sentence
+        )
+
         db.collection("patients")
             .document(patientId)
             .collection("specific_questions")
-            .add(specificQuestions)
+            .document(specificQuestion.id!!)
+            .set(map)
             .addOnSuccessListener { Log.d("Success", "Successfully added general question") }
             .addOnFailureListener { Log.d("Failure", "Failed to add general question") }
     }
@@ -282,6 +323,40 @@ object FirebaseCloudFirestoreApiImpl : FirebaseApi {
 
                     onSuccess(doctorList)
                 }
+            }
+    }
+
+    override fun getDoctor(
+        email: String,
+        onSuccess: (doctor: DoctorVO) -> Unit,
+        onFailure: (String) -> Unit
+    ) {
+        db.collection("doctors")
+            .get()
+            .addOnSuccessListener { result ->
+                val doctor = DoctorVO()
+
+                for (document in result) {
+                    val data = document.data
+
+                    val emailFromDB = data["email"] as String
+                    if (email == emailFromDB) {
+                        doctor.id = data["id"] as String
+                        doctor.name = data["name"] as String
+                        doctor.phone = data["phone"] as String
+                        doctor.email = email
+                        doctor.image = data["image"] as String
+                        doctor.password = data["password"] as String
+                        doctor.speciality = data["speciality"] as String
+                        doctor.university = data["university"] as String
+                        doctor.degree = data["degree"] as String
+                        doctor.doctorSignature = data["doctorSignature"] as String
+                    }
+                }
+                onSuccess(doctor)
+            }
+            .addOnFailureListener { exception ->
+                onFailure(exception?.localizedMessage)
             }
     }
 
@@ -384,6 +459,7 @@ object FirebaseCloudFirestoreApiImpl : FirebaseApi {
     }
 
     override fun getConsultationRequestFromPatient(
+        specialityId: String,
         onSuccess: (consultation: List<ConsultationRequestVO>) -> Unit,
         onFailure: (String) -> Unit
     ) {
@@ -399,18 +475,59 @@ object FirebaseCloudFirestoreApiImpl : FirebaseApi {
                     for (document in result) {
                         val data = document.data
 
-                        var consultationRequestVO = ConsultationRequestVO()
-                        consultationRequestVO.caseSummary =
-                            data?.get("case_summary") as CaseSummaryVO
-                        consultationRequestVO.type = data["type"] as String
-                        consultationRequestVO.patient = data["patient"] as PatientVO
+                        if (specialityId == data?.get("specialityId") && data["isAccept"] == false){
+                            val consultationRequestVO = ConsultationRequestVO()
 
-                        consultationRequestList.add(consultationRequestVO)
+                            val patientMap: Map<String, PatientVO> =
+                                data["patient"] as Map<String, PatientVO>
+
+                            consultationRequestVO.specialityId = data["specialityId"] as String
+
+                            consultationRequestVO.patient = getPatientFromMap(patientMap)
+//                            consultationRequestVO.isAccept = data["isAccept"] as Boolean
+
+                            consultationRequestList.add(consultationRequestVO)
+                        }
                     }
-
                     onSuccess(consultationRequestList)
                 }
             }
+    }
+
+    private fun getPatientFromMap(patientMap: Map<String, PatientVO>): PatientVO {
+
+        val patientVO = PatientVO()
+
+        patientVO.email = patientMap["email"] as String
+        patientVO.allergicMedicine = patientMap["allergicMedicine"] as String
+        patientVO.bloodPressure = patientMap["bloodPressure"] as String
+        patientVO.bloodType = patientMap["bloodType"] as String
+        patientVO.dob = patientMap["dob"] as String
+        patientVO.height = patientMap["height"] as String
+        patientVO.weight = patientMap["weight"] as String
+        patientVO.id = patientMap["id"] as String
+//        patientVO.image = patientMap["image"] as String
+        patientVO.username = patientMap["username"] as String
+        patientVO.password = patientMap["password"] as String
+        patientVO.phone = patientMap["phone"] as String
+
+        return patientVO
+
+    }
+
+    private fun getCaseSummaryFromMap(caseSummaryMap: Map<String, CaseSummaryVO>): CaseSummaryVO {
+        val caseSummary = CaseSummaryVO()
+
+        caseSummary.allergicMedicine = caseSummaryMap["allergic_medicine"] as String
+        caseSummary.bloodPressure = caseSummaryMap["blood_pressure"] as String
+        caseSummary.bloodType = caseSummaryMap["blood_type"] as String
+        caseSummary.case = caseSummaryMap["case"] as String
+        caseSummary.height = caseSummaryMap["height"] as String
+        caseSummary.weight = caseSummaryMap["weight"] as String
+        caseSummary.dob = caseSummaryMap["dob"] as String
+
+        return caseSummary
+
     }
 
     override fun getConsultationsForAPatient(
@@ -468,21 +585,41 @@ object FirebaseCloudFirestoreApiImpl : FirebaseApi {
 
                         val consultationVO = ConsultationVO()
 
-                        val doctor = data?.get("doctor") as DoctorVO
-                        if (doctor.id == doctorId) {
+                        val doctorMap: Map<String, DoctorVO> = data?.get("doctor") as Map<String, DoctorVO>
+                        val caseSummaryMap: Map<String, CaseSummaryVO> = data["case_summary"] as Map<String, CaseSummaryVO>
+                        val patientMap: Map<String, PatientVO> = data["patient"] as Map<String, PatientVO>
+
+//                        val doctor = data?.get("doctor") as DoctorVO
+//                        val id = doctorMap["id"] as String
+//                        if (id == doctorId) {
                             consultationVO.id = document.id
-                            consultationVO.caseSummaryVO =
-                                data?.get("case_summary") as CaseSummaryVO
-                            consultationVO.doctorVO = doctor
-                            consultationVO.patientVO = data["patient"] as PatientVO
-                            consultationVO.specialityId = data["type"] as String
-                        }
+//                            consultationVO.caseSummaryVO = getCaseSummaryFromMap(caseSummaryMap)
+                            consultationVO.doctorVO = getDoctorFromMap(doctorMap)
+                            consultationVO.patientVO = getPatientFromMap(patientMap)
+                            consultationVO.specialityId = data["speciality_id"] as String
+//                        }
                         consultationList.add(consultationVO)
                     }
 
                     onSuccess(consultationList)
                 }
             }
+    }
+
+    private fun getDoctorFromMap(doctorMap: Map<String, DoctorVO>): DoctorVO {
+        val doctorVO = DoctorVO()
+
+        doctorVO.degree = doctorMap["degree"] as String
+//        doctorVO.doctorSignature = doctorMap["signature"] as String
+        doctorVO.email = doctorMap["email"] as String
+//        doctorVO.image = doctorMap["image"] as String
+        doctorVO.name = doctorMap["name"] as String
+        doctorVO.password = doctorMap["password"] as String
+        doctorVO.phone = doctorMap["phone"] as String
+        doctorVO.speciality = doctorMap["speciality"] as String
+        doctorVO.university = doctorMap["university"] as String
+
+        return doctorVO
     }
 
     override fun getQuestionTemplateForDoctor(
@@ -757,10 +894,9 @@ object FirebaseCloudFirestoreApiImpl : FirebaseApi {
 
                     val specificQuestionVO = SpecificQuestionVO()
 
-//                    questionTemplateVO.id = data?.get("id") as String
-                    specificQuestionVO.sentence = data?.get("name") as String
-                    specificQuestionVO.answer = data["answer"] as String
-                    specificQuestionVO.specialityId = data["specialityId"] as String
+                    specificQuestionVO.id = data?.get("id") as String
+                    specificQuestionVO.sentence = data?.get("sentence") as String
+                    specificQuestionVO.type = data["type"] as String
 
                     questionList.add(specificQuestionVO)
                 }

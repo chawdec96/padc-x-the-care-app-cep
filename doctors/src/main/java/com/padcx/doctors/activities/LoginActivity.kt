@@ -10,6 +10,7 @@ import com.padcx.doctors.mvp.presenters.LoginPresenter
 import com.padcx.doctors.mvp.presenters.impls.LoginPresenterImpl
 import com.padcx.doctors.mvp.views.LoginView
 import com.padcx.shared.activities.BaseActivity
+import kotlinx.android.synthetic.main.activity_login.*
 
 class LoginActivity : BaseActivity(), LoginView {
 
@@ -24,11 +25,14 @@ class LoginActivity : BaseActivity(), LoginView {
     }
 
     private fun setUpListener() {
-        //TODO text register
-        mPresenter.onTapRegister()
+        btnFacebookSignIn.setOnClickListener {
+            mPresenter.onTapRegister()
+        }
 
-        //TODO btn login
-        mPresenter.onTapLogin("email", "password")
+        btnLogin.setOnClickListener {
+            mPresenter.onTapLogin(etEmail.text.toString(), etPassword.text.toString())
+        }
+
     }
 
     private fun setUpPresenter() {

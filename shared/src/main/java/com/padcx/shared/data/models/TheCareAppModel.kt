@@ -19,6 +19,7 @@ interface TheCareAppModel {
 
     fun setDoctor(doctorVO: DoctorVO)
     fun getDoctors(onSuccess: (doctors: List<DoctorVO>) -> Unit, onFailure: (String) -> Unit)
+    fun getDoctor(email: String, onSuccess: (doctor: DoctorVO) -> Unit, onFailure: (String) -> Unit)
 
     fun setPatient(
         email: String, password: String, username: String, phone: String, image: String,
@@ -28,7 +29,7 @@ interface TheCareAppModel {
     fun getPatients(onSuccess: (patients: List<PatientVO>) -> Unit, onFailure: (String) -> Unit)
     fun getPatient(email: String, onSuccess: (patients: PatientVO) -> Unit, onFailure: (String) -> Unit)
 
-    fun setSpecificQuestions(patientId: String, questions: List<SpecificQuestionVO>)
+    fun setSpecificQuestions(patientId: String, questions: SpecificQuestionVO)
     fun getSpecificQuestionsForPatient(patientId: String, onSuccess: (specificQuestions: List<SpecificQuestionVO>) -> Unit, onFailure: (String) -> Unit)
 
     fun setGeneralQuestions(documentId: String, questions: GeneralQuestionVO)
@@ -44,22 +45,29 @@ interface TheCareAppModel {
         onFailure: (String) -> Unit
     )
 
-    fun addConsultationRequestByPatient(
-        caseSummaryVO: CaseSummaryVO,
-        patients: PatientVO,
-        type: String
+//    fun addConsultationRequestByPatient(
+//        caseSummaryVO: CaseSummaryVO,
+//        patients: PatientVO,
+//        type: String
+//    )
+
+    fun addConsultationRequest(consultationRequestVO: ConsultationRequestVO)
+
+    fun addCaseSummarySubCollectionToConsultation(documentId: String, caseSummary: List<CaseSummaryVO>)
+
+    fun getCaseSummarySubCollection(
+        documentId: String,
+        onSuccess: (caseSummary: List<CaseSummaryVO>) -> Unit,
+        onFailure: (String) -> Unit
     )
 
     fun getConsultationRequestFromPatient(
+        specialityId: String,
         onSuccess: (consultationRequest: List<ConsultationRequestVO>) -> Unit,
         onFailure: (String) -> Unit
     )
 
-    fun addConsultationByDoctor(
-        caseSummaryVO: CaseSummaryVO, doctorVO: DoctorVO,
-        patients: PatientVO, prescriptionVO: List<PrescriptionVO>,
-        type: String, chat: List<ChatVO>
-    )
+    fun addConsultationByDoctor(doctorVO: DoctorVO, patients: PatientVO, type: String, isStart: Boolean)
 
     fun setRecentlyDoctors(patientId: String, doctorVO: DoctorVO)
     fun getRecentlyDoctors(

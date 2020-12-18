@@ -25,8 +25,8 @@ class ChatPresenterImpl: ChatPresenter, AbstractBasePresenter<ChatView>() {
         patientVO: PatientVO, prescriptions: List<PrescriptionVO>,
         type: String, chats: List<ChatVO>
     ) {
-        mTheCareAppModelImpl.addConsultationByDoctor(
-            caseSummaryVO, doctorVO,patientVO, prescriptions, type, chats
-        )
+//        mTheCareAppModelImpl.addConsultationByDoctor(
+//            caseSummaryVO, doctorVO,patientVO, prescriptions, type, chats
+//        )
     }
 }

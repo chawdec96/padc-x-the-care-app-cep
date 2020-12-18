@@ -1,10 +1,13 @@
 package com.padcx.shared.data.vos
 
 import com.google.firebase.firestore.IgnoreExtraProperties
+import java.io.Serializable
 
 @IgnoreExtraProperties
 data class ConsultationRequestVO(
+    var id: String ?= "",
     var patient: PatientVO = PatientVO(),
-    var type : String ?= "",
-    var caseSummary: CaseSummaryVO = CaseSummaryVO()
-)
+    var specialityId : String ?= "",
+    var caseSummary: ArrayList<CaseSummaryVO> = arrayListOf(),
+    var isAccept: Boolean ?= false
+): Serializable

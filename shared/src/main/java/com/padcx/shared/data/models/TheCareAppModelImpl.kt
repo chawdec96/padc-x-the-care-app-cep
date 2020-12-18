@@ -46,6 +46,14 @@ object TheCareAppModelImpl : TheCareAppModel, BaseModel() {
         })
     }
 
+    override fun getDoctor(
+        email: String,
+        onSuccess: (doctor: DoctorVO) -> Unit,
+        onFailure: (String) -> Unit
+    ) {
+        mFirebaseApi.getDoctor(email, onSuccess, onFailure)
+    }
+
     override fun setPatient(
         email: String, password: String, username: String, phone: String, image: String,
         dob: String, height: String, bloodType: String, weight: String, bloodPressure: String,
@@ -74,7 +82,7 @@ object TheCareAppModelImpl : TheCareAppModel, BaseModel() {
         mFirebaseApi.getPatient(email, onSuccess, onFailure)
     }
 
-    override fun setSpecificQuestions(patientId: String, questions: List<SpecificQuestionVO>) {
+    override fun setSpecificQuestions(patientId: String, questions: SpecificQuestionVO) {
         mFirebaseApi.setSpecificQuestionsSubCollectionForAPatient(patientId, questions)
     }
 
@@ -124,6 +132,7 @@ object TheCareAppModelImpl : TheCareAppModel, BaseModel() {
         mFirebaseApi.getChats(consultationId, onSuccess, onFailure)
     }
 
+    /*
     override fun addConsultationRequestByPatient(
         caseSummaryVO: CaseSummaryVO,
         patients: PatientVO,
@@ -134,33 +143,47 @@ object TheCareAppModelImpl : TheCareAppModel, BaseModel() {
         )
     }
 
+     */
+
+    override fun addConsultationRequest(
+        consultationRequestVO: ConsultationRequestVO
+    ) {
+        mFirebaseApi.setConsultationRequest(consultationRequestVO)
+
+        for (caseSummary in consultationRequestVO.caseSummary) {
+            mFirebaseApi.setCaseSummarySubCollection("consultation_request", consultationRequestVO.id!!, caseSummary)
+        }
+    }
+
+    override fun addCaseSummarySubCollectionToConsultation(
+        documentId: String,
+        caseSummaryList: List<CaseSummaryVO>
+    ) {
+        for (caseSummary in caseSummaryList){
+            mFirebaseApi.setCaseSummarySubCollection("consultations", documentId, caseSummary)
+        }
+    }
+
+    override fun getCaseSummarySubCollection(
+        documentId: String,
+        onSuccess: (caseSummary: List<CaseSummaryVO>) -> Unit,
+        onFailure: (String) -> Unit
+    ) {
+        mFirebaseApi.getCaseSummarySubCollection(documentId, onSuccess, onFailure)
+    }
+
     override fun getConsultationRequestFromPatient(
+        specialityId: String,
         onSuccess: (consultationRequest: List<ConsultationRequestVO>) -> Unit,
         onFailure: (String) -> Unit
     ) {
-        mFirebaseApi.getConsultationRequestFromPatient(onSuccess = {
-            // TODO request consultations
-        }, onFailure = {
-            onFailure(it)
-        })
+        mFirebaseApi.getConsultationRequestFromPatient(specialityId, onSuccess, onFailure)
     }
 
     override fun addConsultationByDoctor(
-        caseSummaryVO: CaseSummaryVO,
-        doctorVO: DoctorVO,
-        patients: PatientVO,
-        prescriptionVO: List<PrescriptionVO>,
-        type: String,
-        chat: List<ChatVO>
+        doctorVO: DoctorVO, patients: PatientVO, type: String, isStart: Boolean
     ) {
-        mFirebaseApi.setConsultationByDoctor(
-            caseSummaryVO,
-            doctorVO,
-            patients,
-            prescriptionVO,
-            type,
-            chat
-        )
+        mFirebaseApi.setConsultationByDoctor(doctorVO, patients, type, isStart)
     }
 
     override fun setRecentlyDoctors(patientId: String, doctorVO: DoctorVO) {

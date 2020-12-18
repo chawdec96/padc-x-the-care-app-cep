@@ -20,8 +20,7 @@ class SpecificQuestionViewHolder(itemView: View, private val delegate: SpecificQ
                 keyEvent.keyCode == KeyEvent.KEYCODE_ENTER) {
                 if (keyEvent == null || !keyEvent.isShiftPressed) {
                     // the user is done typing.
-                    data.answer = itemView.etAnswer.text.toString()
-                    delegate.onTapAnswerEditText(data)
+                    delegate.onTapAnswerEditText(data, itemView.etAnswer.text.toString())
                     true // consume.
                 }
             }

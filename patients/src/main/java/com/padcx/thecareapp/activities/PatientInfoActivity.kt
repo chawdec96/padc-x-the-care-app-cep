@@ -13,10 +13,7 @@ import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.padcx.shared.activities.BaseActivity
-import com.padcx.shared.data.vos.GeneralQuestionVO
-import com.padcx.shared.data.vos.PatientVO
-import com.padcx.shared.data.vos.SpecialityVO
-import com.padcx.shared.data.vos.SpecificQuestionVO
+import com.padcx.shared.data.vos.*
 import com.padcx.thecareapp.R
 import com.padcx.thecareapp.adapter.SpecificQuestionRecyclerAdapter
 import com.padcx.thecareapp.fragments.PatientInfoDialogFragment
@@ -38,7 +35,7 @@ class PatientInfoActivity : BaseActivity(), PatientInfoView {
     private var month = 1
     private var year = "1996"
     private var bloodType = "A"
-    private var specificQuesWithAns: ArrayList<SpecificQuestionVO> = arrayListOf()
+    private var specificQuesWithAns: ArrayList<CaseSummaryVO> = arrayListOf()
 
 
     private lateinit var mPresenter: PatientInfoPresenter
@@ -103,33 +100,14 @@ class PatientInfoActivity : BaseActivity(), PatientInfoView {
         tvAllergicMedicine.text = patientVO.allergicMedicine
     }
 
-    private fun addPatientData() {
-        tvDob.visibility = View.GONE
-        llDob.visibility = View.GONE
-
-        tvHeight.visibility = View.GONE
-        etHeight.visibility = View.GONE
-
-        tvBloodType.visibility = View.GONE
-        spinnerBloodType.visibility = View.GONE
-
-        tvAllergicMedicine.visibility = View.GONE
-        flAllergicMedicine.visibility = View.GONE
-
-        llStep1Summary.visibility = View.VISIBLE
-
-
-    }
-
     private fun setUpRecycler() {
-        mSpecificQuestionAdapter = SpecificQuestionRecyclerAdapter(mPresenter, "question")
+        mSpecificQuestionAdapter = SpecificQuestionRecyclerAdapter(mPresenter)
 
         val layoutManager = LinearLayoutManager(this)
         rvSpecificQuestions.layoutManager = layoutManager
         rvSpecificQuestions.addItemDecoration(
             DividerItemDecoration(
-                rvSpecificQuestions.context,
-                layoutManager.orientation
+                rvSpecificQuestions.context, layoutManager.orientation
             )
         )
         rvSpecificQuestions.adapter = mSpecificQuestionAdapter
@@ -160,7 +138,9 @@ class PatientInfoActivity : BaseActivity(), PatientInfoView {
         btnConsult.setOnClickListener {
             patientVO = PatientPrefs.getUserInfo()
 
-            mPresenter.onTapBtnConsultant(this, patientVO)
+            mPresenter.onTapBtnConsultant(this, ConsultationRequestVO(
+                "reqId${patientVO.phone}", patientVO, specialityVO!!.id, specificQuesWithAns, false
+            ))
         }
     }
 
@@ -284,12 +264,12 @@ class PatientInfoActivity : BaseActivity(), PatientInfoView {
         mSpecificQuestionAdapter.setNewData(specificQuestions)
     }
 
-    override fun addSpecificQuestionsWithAnswer(specificQuestionVO: SpecificQuestionVO) {
-        specificQuesWithAns.add(specificQuestionVO)
+    override fun addSpecificQuestionsWithAnswer(caseSummaryVO: CaseSummaryVO) {
+        specificQuesWithAns.add(caseSummaryVO)
     }
 
-    override fun showPatientInfoDialog(patientVO: PatientVO) {
-        PatientInfoDialogFragment.newInstance(patientVO, specificQuesWithAns , specialityVO!!.id)
+    override fun showPatientInfoDialog(consultationRequestVO: ConsultationRequestVO) {
+        PatientInfoDialogFragment.newInstance(consultationRequestVO, specialityVO!!.id)
             .show(supportFragmentManager, "dialog")
     }
 }

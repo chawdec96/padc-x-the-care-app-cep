@@ -10,31 +10,17 @@ import com.padcx.thecareapp.delegates.SpecificQuestionItemDelegate
 import com.padcx.thecareapp.views.viewholders.SpecificQuestionViewHolder
 import com.padcx.thecareapp.views.viewholders.SpecificQuestionWithAnsViewHolder
 
-class SpecificQuestionRecyclerAdapter(private val delegate: SpecificQuestionItemDelegate, private val type: String):
+class SpecificQuestionRecyclerAdapter(private val delegate: SpecificQuestionItemDelegate) :
     BaseAdapter<BaseViewHolder<SpecificQuestionVO>, SpecificQuestionVO>() {
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BaseViewHolder<SpecificQuestionVO> {
-        when (type){
-            "question" -> {
-                return SpecificQuestionViewHolder(
-                    LayoutInflater.from(parent.context)
-                        .inflate(R.layout.item_specific_question, parent, false),
-                    delegate
-                )
-            }
-            "answer" -> {
-                return SpecificQuestionWithAnsViewHolder(
-                    LayoutInflater.from(parent.context)
-                        .inflate(R.layout.item_specific_question_with_answer, parent, false)
-                )
-            }
-            else ->{
-                return SpecificQuestionViewHolder(
-                    LayoutInflater.from(parent.context)
-                        .inflate(R.layout.item_specific_question, parent, false),
-                    delegate
-                )
-            }
-        }
 
+    override fun onCreateViewHolder(
+        parent: ViewGroup,
+        viewType: Int
+    ): BaseViewHolder<SpecificQuestionVO> {
+        return SpecificQuestionViewHolder(
+            LayoutInflater.from(parent.context)
+                .inflate(R.layout.item_specific_question, parent, false),
+            delegate
+        )
     }
 }

@@ -9,9 +9,6 @@ interface FirebaseApi {
         dob: String, height: String, bloodType: String, weight: String, bloodPressure: String,
         allergicMedicine: String
     )
-//    fun setPatient(patientVO: PatientVO)
-//
-//    fun setDoctor(doctors: DoctorVO)
 
     fun registeredDoctor(
         email: String, password: String,
@@ -21,15 +18,25 @@ interface FirebaseApi {
         degree: String, university: String
     )
 
-    fun setConsultationRequestByPatient(
-        caseSummaryVO: CaseSummaryVO, patientVO: PatientVO, type: String
+//    fun setConsultationRequestByPatient(
+//        caseSummaryVO: CaseSummaryVO, patientVO: PatientVO, type: String
+//    )
+
+    fun setConsultationRequest(
+        consultationRequestVO: ConsultationRequestVO
     )
 
-    fun setConsultationByDoctor(
-        caseSummaryVO: CaseSummaryVO, doctors: DoctorVO,
-        patientVO: PatientVO, prescriptionVO: List<PrescriptionVO>,
-        type: String, chat: List<ChatVO>
+    fun setCaseSummarySubCollection(
+        nodeName: String, documentId: String, caseSummaryVO: CaseSummaryVO
     )
+
+    fun getCaseSummarySubCollection(
+        documentId: String,
+        onSuccess: (caseSummary: List<CaseSummaryVO>) -> Unit,
+        onFailure: (String) -> Unit
+    )
+
+    fun setConsultationByDoctor(doctors: DoctorVO, patientVO: PatientVO, type: String, isStart: Boolean)
 
     fun setCheckOutByPatient(
         deliveryRoutine: DeliveryRoutineVO,
@@ -39,7 +46,7 @@ interface FirebaseApi {
 
     fun setRecentDoctorSubCollectionForAPatient(patientId: String,doctors: DoctorVO)
     fun setGeneralQuestionSubCollectionForAPatient(patientId: String, questionTemplateVO: GeneralQuestionVO)
-    fun setSpecificQuestionsSubCollectionForAPatient(patientId: String, specificQuestionVO: List<SpecificQuestionVO>)
+    fun setSpecificQuestionsSubCollectionForAPatient(patientId: String, specificQuestionVO: SpecificQuestionVO)
 
     fun setPrescriptionSubCollection(nodeName: String, documentId: String, prescriptionVO: PrescriptionVO)
 
@@ -48,6 +55,7 @@ interface FirebaseApi {
     fun setChatSubCollectionToConsultation(consultationId: String, chatVO: ChatVO)
 
     fun getDoctors(onSuccess: (doctors: List<DoctorVO>) -> Unit, onFailure: (String) -> Unit)
+    fun getDoctor(email: String, onSuccess: (doctor: DoctorVO) -> Unit, onFailure: (String) -> Unit)
 
     fun getPatients(onSuccess: (patients: List<PatientVO>) -> Unit, onFailure: (String) -> Unit)
     fun getPatient(email: String, onSuccess:(patient: PatientVO) -> Unit, onFailure: (String) -> Unit )
@@ -58,7 +66,7 @@ interface FirebaseApi {
     )
 
     fun getConsultationRequestFromPatient(
-        onSuccess: (consultation: List<ConsultationRequestVO>) -> Unit, onFailure: (String) -> Unit
+        specialityId: String, onSuccess: (consultation: List<ConsultationRequestVO>) -> Unit, onFailure: (String) -> Unit
     )
 
     fun getConsultationsForAPatient(

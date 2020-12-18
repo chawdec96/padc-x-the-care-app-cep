@@ -34,7 +34,14 @@
 
     </LinearLayout>
 
-    <include layout="@layout/viewpod_appointment_request"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvAppointments"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/margin_medium"
+        tools:listitem="@layout/viewpod_appointment_request"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:orientation="horizontal"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -47,7 +54,7 @@
         android:textStyle="bold" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvAppointments"
+        android:id="@+id/rvConsultations"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="@dimen/margin_medium"

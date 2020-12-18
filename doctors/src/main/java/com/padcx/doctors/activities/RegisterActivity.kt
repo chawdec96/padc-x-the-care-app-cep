@@ -10,6 +10,7 @@ import com.padcx.doctors.mvp.presenters.RegisterPresenter
 import com.padcx.doctors.mvp.presenters.impls.RegisterPresenterImpl
 import com.padcx.doctors.mvp.views.RegisterView
 import com.padcx.shared.activities.BaseActivity
+import kotlinx.android.synthetic.main.activity_register.*
 
 class RegisterActivity : BaseActivity(), RegisterView {
 
@@ -26,14 +27,14 @@ class RegisterActivity : BaseActivity(), RegisterView {
 
     private fun setUpListener() {
         //TODO btn register
-        mPresenter.onTapRegister(
-            "name", "email", "password","phone",
-            "speciality", "university","degree",
-            "doctorSignature", "image"
-        )
-
+        btnRegister.setOnClickListener {
+            mPresenter.onTapRegister(
+                etName.text.toString(), etEmail.text.toString(), etPassword.text.toString(),
+                etPhone.text.toString(), etSpeciality.text.toString(), etDegree.text.toString(),
+                etUniversity.text.toString(), etDoctorSignature.text.toString(), "")
+        }
         //TODO text login
-        mPresenter.onTapLogin()
+//        mPresenter.onTapLogin()
     }
 
     private fun setUpPresenter() {

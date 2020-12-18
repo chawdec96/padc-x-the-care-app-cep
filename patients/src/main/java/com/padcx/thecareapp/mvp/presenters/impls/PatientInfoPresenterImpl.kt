@@ -3,9 +3,7 @@ package com.padcx.thecareapp.mvp.presenters.impls
 import androidx.lifecycle.LifecycleOwner
 import com.padcx.shared.data.models.TheCareAppModel
 import com.padcx.shared.data.models.TheCareAppModelImpl
-import com.padcx.shared.data.vos.GeneralQuestionVO
-import com.padcx.shared.data.vos.PatientVO
-import com.padcx.shared.data.vos.SpecificQuestionVO
+import com.padcx.shared.data.vos.*
 import com.padcx.shared.mvp.presenters.AbstractBasePresenter
 import com.padcx.thecareapp.mvp.presenters.PatientInfoPresenter
 import com.padcx.thecareapp.mvp.views.PatientInfoView
@@ -57,16 +55,23 @@ class PatientInfoPresenterImpl: PatientInfoPresenter, AbstractBasePresenter<Pati
         })
     }
 
-    override fun onTapBtnConsultant(owner: LifecycleOwner, patientVO: PatientVO) {
-        mView?.showPatientInfoDialog(patientVO)
+    override fun onTapBtnConsultant(owner: LifecycleOwner, consultationRequestVO: ConsultationRequestVO) {
+        mView?.showPatientInfoDialog(consultationRequestVO)
     }
 
     override fun onTapEditText(owner: LifecycleOwner) {
         mView?.showPatientInfo()
     }
 
-    override fun onTapAnswerEditText(specificQuestionVO: SpecificQuestionVO) {
-        mView?.addSpecificQuestionsWithAnswer(specificQuestionVO)
+    override fun onTapAnswerEditText(specificQuestionVO: SpecificQuestionVO, answer: String) {
+//        mTheCareAppModelImpl.setSpecificQuestions(PatientPrefs.getUserId()!!, specificQuestionVO)
+        val caseSummary = CaseSummaryVO()
+        caseSummary.id = specificQuestionVO.id
+        caseSummary.question = specificQuestionVO.sentence
+        caseSummary.answer = answer
+        caseSummary.type = specificQuestionVO.type
+
+        mView?.addSpecificQuestionsWithAnswer(caseSummary)
     }
 
     override fun updateGeneralQuestions(owner: LifecycleOwner, documentId: String, questionVO: GeneralQuestionVO) {
